@@ -1,0 +1,59 @@
+@charset "utf-8"'
+
+
+	.mainTit {font-family: font-size: line-height: padding: text-align: } 
+	
+	.menu { width:100%; font-family: "나눔손글씨 펜"; }
+    	.menuFrame { clear:both; width:800px; margin:20px auto; padding:5px; height:80px; }
+	#tnb { right:60px; font-family: "나눔손글씨 펜"; }
+	#tnb ul a { padding-left:18px; background-repeat:no-repeat;
+        background-position:left center; color:#333; font-size:28px; font-weight: bold; }
+	#gnb li { width:20%; position:relative; height:48px; }
+	#grid1 .grdBox { width: 90%; padding:40px; line-height: 70px;}
+   	#grid1 .grdBox li { float:left; height:100%; margin-top:25px; margin-right:2% auto; }
+	.ft { clear:both; height:200px; width:100%;
+        background:#333; }
+    .ftWrap { width:1240px; height:200px; margin:0 auto; 
+        background-image:url(""); 
+        background-position:left center; background-repeat:no-repeat; }
+    .fnb { width:60%; float:left; margin-left:80px; }
+    .fnb li { float:left; padding:10px; }
+    .fnb a { color:#fff; font-size:0.9em; }
+    .fnb a.active { color:#f442b0; }
+
+	.grdMore1
+	.lstBtn1 {display: block; text-indent text-align}
+	.mainVsLeftBtn1
+	.imgBox { clear:both; width:400%; height:100%; }
+	.btnBox { width:170px; margin:20px auto; }
+	.btnBox li { float:left; margin-left:10px; }
+	#gnb a:hover { color:#bc1a17; }
+    	#gnb li:after { content:" "; display:block; width:2px; height:2px; background:transparent; transition:0.5s; 
+        position:absolute; bottom:0px; right:0; }
+	#collapse { width:1900px; position:absolute; z-index:60; 
+        top:60px; left:calc(calc(100% - 1200px) / 2); display:none; font-family: "Bookman Old Style"; }
+    #ck1:checked ~ #collapse { display:block; }
+    .colMenu { width:239px; float:left; height:auto; 
+        background:#005295; border-right:1px solid #fff; }
+	.lstBtn { display:block; width:40px; height:40px;  border:1px solid #333;   			padding:10px; box-sizing:border-box; padding-top:8px; cursor:pointer; float:right;  }
+	.line { display:block; width:18px; height:3px; margin-top:4px; 
+        background:#333; transition:0.5s; }
+
+
+
+
+	.colMenu { width:239px; float:left; height:auto; 
+        background:#005295; border-right:1px solid #fff; }
+	.colMenu li.lstTit { background-color:#bc1a17; line-height:48px;  }
+	#gnb a:hover { color:#bc1a17; }
+	.btnBox li button:hover { cursor:pointer; background:#e6738b; }
+   	.btnBox li button.active { background:#e66edc; width:20px; }
+
+
+		
+
+
+				
+#tnb ul a { padding-left:18px; background-repeat:no-repeat;
+        background-position:left center; color:#333; font-size:28px; font-weight: bold;  }
+

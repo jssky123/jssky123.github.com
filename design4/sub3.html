@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>issue 페이지</title>
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" 
+    href="common.css">
+    <link rel="stylesheet" 
+    href="ft.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0. user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta http-equiv="refresh" content="180">
+
+<meta name="application-name" content="deco&e website">
+
+<meta name="author" content="lee hyun">
+
+<meta name="description" content="웹사이트 소개">
+
+<meta name="keywords" content="일신,방직,패션,섬유">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico">
+
+<link rel="icon" href="./ico/favicon.png">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/vend.microsoft.icon">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/x-icon">
+
+<meta name="msapplication-TitleColor" content="#FFFFFF">
+
+<meta name="msapplication-TitleImage" content="./ico/ms-ico/ms-icon-128.png">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+    $(document).ready(function(){
+       var wd=parseInt($(window).width());
+        function rAni(){
+            $(".imgBox").not(":animated").animate({"margin-left" : -wd+"px"},
+                                                 
+                                                 800, function(){
+                $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                $(".imgBox").css("margin-left", "100px");
+            });
+        };
+        var intv = setInterval(function(){ rAni(); }, 3000);
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var ht=parseInt($(window).height());
+        $(window).on("mousewheel", function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                $("html, body").not(":animated").animate({scrollTop:"+="
++ht+"px"},800);
+            } else {
+                $("html, body").not(":animated").animate({scrollTop:"-="+ht+"px"}, 800);
+            }
+            return false;
+        })
+    })
+    
+    </script>
+
+<style>
+.ft{background: #333;}
+.proTit{ text-align: center; font-family: "broadway";}
+.page1{padding-left: 60px;}
+.fd1{float:left;}
+.fd2{float:left;}
+.fd3{float:left;}
+    
+.s1{padding:140px;}
+.s2{margin:-65px;}
+.s3{padding:290px;}
+
+.imgBox {width: 350%; height: 100%;}
+        .imgBox li {float: left; width: 25%; height: 100%;}
+        .imgBox li a {display: block; width: 100%; height: 100%;}
+        .imgBox li a img {display: block; width: 100%; height: 100%;}    
+    
+    
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header class=hd>
+<input type="checkbox" id="ck1" class="ckItem">
+        <label for="ck1" class=lstBtn>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+
+        <div id="collapse">
+            <ul class="colMenu first">
+                <li class="lstTit">
+                <a href="sub5.html">COMPANY</a>
+                </li>
+                <li>
+                <a href="sub5.html">Deco's Vision</a> </li>
+                <li>
+                <a href="sub5.html">Deco's History</a>
+                </li>
+            </ul>
+            <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub2.html">BRAND</a>
+                </li>
+                <li>
+                <a href="sub2.html">Deco</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Cash</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Ana Capri</a>    
+                </li>
+                <li>
+                <a href="sub2.html">SIWY</a>    
+                </li>
+                <li>
+                <a href="sub2.html">96NY</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub3.html">DECO & ISSUE</a>
+                </li>
+                <li>
+                <a href="sub3.html">NEWS</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="">IR</a>
+                </li>
+                <li>
+                <a href="">Gallery</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub4.html">CONTACT US</a>
+                </li>
+                <li>
+                <a href="sub4.html">Location</a>    
+                </li>
+                <li>
+                <a href="sub4.html">Store</a>    
+                </li>
+            </ul>
+            <label for="ck1" class="closeBtn"></label>
+        </div>
+    
+   
+   <nav id="tnb">
+    <ul class="left">
+        <li><a href="index.html"><img src="images/LOGO.png"></a></li>
+    </ul>
+    <ul class="right">
+        <li><a href="sub1.html"><img src="images/h_login.png"><span>로그인</span></a></li>
+        <li><a href="sub1.html"><img src="./images/h_signin.png"><span>회원가입</span></a></li>
+    </ul>
+</nav>
+ <nav id="gnb" class="menu">
+    <ul class="menuFrame">
+        <li><a href="sub5.html">COMPANY</a></li>
+        <li><a href="sub2.html">BRAND</a></li>
+        <li><a href="sub3.html">DECO & ISSUE</a></li>
+        <li><a href="">IR</a></li>
+        <li><a href="sub4.html">CONTACT US</a></li>
+    </ul>
+</nav>
+  <div class="page1">
+      <h2 class="proTit">DECO & E ISSUE</h2>
+          <ul>
+              <li class="fd1"><a href=""><img src="./images/sub2_img4.jpg" alt="sub2_4"></a></li>
+              <li class="fd2"><a href=""><img src="./images/sub2_img2.jpg" alt="sub2_2"></a></li>
+              <li class="fd3"><a href=""><img src="./images/sub2_img3.jpg" alt="sub2_3"></a></li>
+              <li class="fd4"><a href=""><img src="./images/sub2_img1.jpg" alt="sub2_1"></a></li>
+          </ul>
+        
+       
+          
+      
+  </div>
+  <div class="txtBox" id="txtBox1">
+      <h3 class="subTit">
+          <span class="s1">배우 서효림과 함께하는 아나카프리 </span>
+          <span class="s2">멜로디데이와 함께하는 16 FW 컬렉션</span>
+          <span class="s3">스타일리스트 서수경과 함께하는 스타일링 클래스</span>
+          
+      </h3>
+      
+       
+  </div>
+  
+        <ul class="imgBox">
+            
+             <li class="fd1"><a href=""><img src="./images/sub2_img4.jpg" alt="sub2_4"></a>
+             </li>
+              <li class="fd2"><a href=""><img src="./images/sub2_img2.jpg" alt="sub2_2"></a></li>
+              <li class="fd3"><a href=""><img src="./images/sub2_img3.jpg" alt="sub2_3"></a></li>
+              <li class="fd4"><a href=""><img src="./images/sub2_img1.jpg" alt="sub2_1"></a></li>
+            
+            
+        </ul>
+  
+   <footer class="ft">
+    <div class="ftWrap">
+        <nav class="fnb">
+            <ul>
+                <li>
+                    <a href="">Private Policy</a>
+                </li>
+                <li>
+                    <a href="">Agreement</a>
+                </li>
+                <li>
+                    <a href="">About DECO & E</a>
+                </li>
+                <li>
+                    <a href="">Guide</a>
+                </li>
+                
+                
+            </ul>
+            <p class="cp">
+            <span>
+           PRIVACY POLICY
+           CS CENTER
+           MEMBERSHIP
+           27, WIRYESEONG-DAERO 22-GIL, SONGPA-GU, SEOUL, REPUBLIC OF KOREA   
+            </span>
+            <span>
+            CALL CENTER: TEL 02 2145 1300   COPYRIGHT©DECO&E LTD., ALL RIGHT RESERVED.
+            </span>
+            <span>
+            ADDRESS: 7F 82.SAEMUAN-RO, JONGNO-GU, SEOUL KOREA
+            </span>
+            <span>
+            사업자등록번호:101-86-56043
+            </span>
+            <span>
+            Copyright by Deco & E. All rights reserved
+            </span>
+            
+                
+            </p>
+        </nav>
+        
+    </div>
+</footer>   
+    </header>
+    </div>    
+</body>
+</html>

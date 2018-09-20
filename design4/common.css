@@ -1,0 +1,46 @@
+@charset "utf-8";
+<style>    
+    ckItem { display:none; }
+    #collapse { width:1900px; position:absolute; z-index:60; 
+        top:60px; left:calc(calc(100% - 1200px) / 2); display:none; font-family: "Bookman Old Style"; }
+    #ck1:checked ~ #collapse { display:block; }
+    .colMenu { width:239px; float:left; height:auto; 
+        background:#005295; border-right:1px solid #fff; }
+    .colMenu li { line-height:38px; }
+    .colMenu li.lstTit { background-color:#bc1a17; line-height:48px; }
+    .colMenu li a { display:block; color:#fff; text-indent:20px; }
+    .lstBtn { display:block; width:40px;  height:40px; border:1px solid #333;   padding:10px; box-sizing:border-box; padding-top:8px; cursor:pointer; float:right; }        
+    .line { display:block; width:18px;           height:3px; margin-top:4px; 
+        background:#333; transition:0.5s; }
+    .line:nth-child(2) { width:12px; }
+    .lstBtn:hover .line:nth-child(2) { width:18px; }    
+
+    
+    .menu { width:100%; font-family: "나눔손글씨 펜"; }
+    .menuFrame { clear:both; width:800px; margin:20px auto; padding:5px; height:80px; }
+    .menu li { float:left; }
+    .menu a { color:#333; font-size:28px; font-weight:bold;
+        display:block; text-align:center; width:100%; 
+        height:45px; line-height:40px; transition:0.5s; }
+    #tnb { right:60px; font-family: "나눔손글씨 펜"; }
+    #tnb ul a { padding-left:18px; background-repeat:no-repeat;
+        background-position:left center; color:#333; font-size:28px; font-weight: bold; }
+    #tnb ul a:hover { color:#bc1a17; }
+    #tnb { width:100%; height:24px; clear:both; padding-top:5px; }
+    #tnb .right { float:right; }
+    
+    #tnb li { float:left; padding-right:10px; }
+    #tnb .left a { left:80px; top:30px; z-index:100; background-size:100% 100%;}
+	#tnb li span {padding-left:10px;}
+   
+    
+    #gnb li { width:20%; position:relative; height:48px; }   
+    #gnb a:hover { color:#bc1a17; }
+    #gnb li:after { content:" "; display:block; width:2px; height:2px; background:transparent; transition:0.5s; 
+        position:absolute; bottom:0px; right:0; }
+    #gnb li:hover:after { background:#bc1a17; width:100%; }
+    #gnb li:before { content:" "; display:block; width:2px; margin:0px auto; height:2px; background:transparent; 
+        transition:0.5s; left:0; top:0; }
+    #gnb li:hover:before { background:#bc1a17; width:100%; }
+    .ckItem {display:none;}
+</style>

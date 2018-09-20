@@ -1,0 +1,30 @@
+@charset "utf-8";
+<style>
+    .imgBox { clear:both; width:400%; height:100%; }     
+    .imgBox li {width:25%; float:left; height:100%; position:relative; }
+    #page1 { overflow:hidden; }
+    .btnBox { width:170px; margin:20px auto; }
+    .btnBox li { float:left; margin-left:10px; }
+    .btnBox li button { display:block; width:12px; background:#ccc;
+        height:12px; border-radius:7px; outline:0; border:0; }
+    .btnBox li button:hover { cursor:pointer; background:#e6738b; }
+    .btnBox li button.active { background:#e66edc; width:20px; }
+    #page1 .imgBox { padding-top:60px; }
+    #page1 .imgBox li { text-align:center; }
+</style>
+<style>    
+    #grid1 .grdBox { width: 90%; padding:40px; line-height: 70px;}
+    #grid1 .grdBox li { float:left; height:100%; margin-top:25px; margin-right:2% auto; } 
+    #grid1 .grdBox li.first { margin-left:180px; }
+    #grid1 .grdBox li.last { margin-right:0px; }
+</style> 
+
+<style>
+#page3 { margin:221px; line-height: 70px;}
+#page3 li {float: left;} 
+#page3 li a {display: block;}
+#page3 .c1 {margin-right:0px auto;}
+#page3 .c2 {margin-left: 150px;}
+
+    
+</style>   

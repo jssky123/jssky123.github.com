@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인/회원가입 페이지</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" 
+    href="common.css">
+    <link rel="stylesheet" 
+    href="ft.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0. user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta http-equiv="refresh" content="180">
+
+<meta name="application-name" content="deco&e website">
+
+<meta name="author" content="lee hyun">
+
+<meta name="description" content="웹사이트 소개">
+
+<meta name="keywords" content="일신,방직,패션,섬유">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico">
+
+<link rel="icon" href="./ico/favicon.png">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/vend.microsoft.icon">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/x-icon">
+
+<meta name="msapplication-TitleColor" content="#FFFFFF">
+
+<meta name="msapplication-TitleImage" content="./ico/ms-ico/ms-icon-128.png">
+
+    
+    <style>
+    .ft {background:#333;}
+    </style>
+    
+    <style>
+     input[name=rdo1] { display:none; }
+    .raItem { display:none; }
+        .tab { padding-top:150px; margin:20px auto; width:900px; font-family:"나눔손글씨 펜"; font-size: 28px;}
+  
+    .tabBox { width:900px; height:40px; }
+    .tabBox label { display:block;               float:left; width:100px;
+        height:40px; line-height:40px; text-align:center; 
+        border-right:1px solid #333; border-top:1px solid #333;
+        border-bottom:1px solid #333; background:#000;
+        border-left:1px solid #444; cursor:pointer; 
+        color:#fff; }
+    .tabBox label.item1 { border-left:1px solid #333; }
+    .conBox { clear:both; width:900px; }
+    .tb { border:1px solid #333; width:898px; display:none; }
+    .tbTit { clear:both; line-height:100px; padding-left:25px; }
+    .tbCom { clear:both; line-height:1.3; padding:25px; }
+    .tbCom2 { clear:both; line-height:1.3; padding:25px; }
+    .tbCom3 { clear:both; line-height:1.3; padding:25px; }
+    .tbCom4 { clear:both; line-height:1.3; padding:25px; }
+    .im { display:block; width:100%; }
+    .tbl { float:left; }
+    .tbl .btn { display:block; width:120px; height:40px; 
+        line-height:40px; text-align:center; border-left:2px solid #333; border-top:2px solid #333; border-bottom:2px solid #333; z-index:10; cursor:pointer; border-radius:10px 10px 0px 0px;
+        color:#333; }
+    .tbl:last-child .btn { border-right:2px solid #333; }
+    .tbo { position:absolute; top:67px;         left:0; z-index:2;
+        border:2px solid #333; width:898px; display:none; }        
+</style>
+
+<style>
+    #ra11:checked ~ .tabBox label.item1 { background:#7b14e5; }
+    #ra12:checked ~ .tabBox label.item2 { background:#7b14e5; }
+    #ra13:checked ~ .tabBox label.item3 { background:#7b14e5; }
+    #ra11:checked ~ .conBox #tb1 { display:block; }
+    #ra12:checked ~ .conBox #tb2 { display:block; }
+    #ra13:checked ~ .conBox #tb3 { display:block; }
+</style>
+
+<style>
+    .conBox a {display: block; padding-left:60px;}
+    
+    #search { padding-top:10px; font-family: "나눔바른고딕"; font-size:18px; border:1px solid #333; margin:10px;}
+</style>
+
+</head>
+<body>
+ <div class="wrap">
+<header class=hd>
+<input type="checkbox" id="ck1" class="ckItem">
+        <label for="ck1" class=lstBtn>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+
+        <div id="collapse">
+            <ul class="colMenu first">
+                <li class="lstTit">
+                <a href="sub5.html">COMPANY</a>
+                </li>
+                <li>
+                <a href="sub2.html">Deco's Vision</a> </li>
+                <li>
+                <a href="sub5.html">Deco's History</a>
+                </li>
+            </ul>
+            <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub2.html">BRAND</a>
+                </li>
+                <li>
+                <a href="sub2.html">Deco</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Cash</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Ana Capri</a>    
+                </li>
+                <li>
+                <a href="sub2.html">SIWY</a>    
+                </li>
+                <li>
+                <a href="sub2.html">96NY</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub3.html">DECO & ISSUE</a>
+                </li>
+                <li>
+                <a href=sub3.html"">NEWS</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="">IR</a>
+                </li>
+                <li>
+                <a href="">Gallery</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub4.html">CONTACT US</a>
+                </li>
+                <li>
+                <a href="sub4.html">Location</a>    
+                </li>
+                <li>
+                <a href="sub4.html">Store</a>    
+                </li>
+            </ul>
+            <label for="ck1" class="closeBtn"></label>
+        </div>
+    
+   
+   <nav id="tnb">
+    <ul class="left">
+        <li><a href="index.html"><img src="images/LOGO.png"></a></li>
+    </ul>
+    <ul class="right">
+        <li><a href="sub1.html"><img src="images/h_login.png"><span>로그인</span></a></li>
+        <li><a href="sub1.html"><img src="./images/h_signin.png"><span>회원가입</span></a></li>
+    </ul>
+</nav>
+<nav id="gnb" class="menu">
+    <ul class="menuFrame">
+        <li><a href="sub5.html">COMPANY</a></li>
+        <li><a href="sub2.html">BRAND</a></li>
+        <li><a href="sub3.html">DECO & ISSUE</a></li>
+        <li><a href="">IR</a></li>
+        <li><a href="sub4.html">CONTACT US</a></li>
+    </ul>
+</nav>
+<div class="tab" id="tab1">
+    <input type="radio" name="rdo1"
+    id="ra11" checked>
+    <input type="radio" name="rdo1"
+    id="ra12">
+    <input type="radio" name="rdo1"
+    id="ra13">
+    <div class="tabBox">
+       
+        <label for="ra11" class="item1">로그인</label>
+        <label for="ra12" class="item2">회원가입</label>
+        <label for="ra13" class="item3">ID PS 찾기</label>
+    </div>
+    <section class="conBox">
+        <div id="tb1" class="tb">
+            <h2 class="tbTit">로그인</h2>
+            <p class="tbCom">아이디:<input type="text" id="search" placeholder=""></p>
+            <p class="tbCom2">비밀번호:<input type="text" id="search" placeholder=""></p>
+            <a><img src="./images/news.jpg" alt="어바웃"></a>
+        </div>
+        <div id="tb2" class="tb">
+            <h2 class="tbTit">회원가입</h2>
+            <p class="tbCom">아이디:<input type="text" id="search" placeholder=""></p>
+            <p class="tbCom2">비밀번호:<input type="text" id="search" placeholder=""></p>
+            <p class="tbCom2">중복확인</p>
+            <a><img src="./images/news.jpg" alt="로그인메뉴"></a>
+        </div>
+        <div id="tb3" class="tb">
+            <h2 class="tbTit">ID PS 찾기</h2>
+            <p class="tbCom">아이디:<input type="text" id="search" placeholder=""></p>
+            <p class="tbCom2">비밀번호:<input type="text" id="search" placeholder=""></p>
+            <p class="tbCom3">e-mail 인증</p>
+            <p class="tbCom4">문자 인증</p>
+            <a><img src="./images/news.jpg" alt="찾기"></a>
+        </div>
+    </section>
+</div>  
+   
+   
+<footer class="ft">
+    <div class="ftWrap">
+        <nav class="fnb">
+            <ul>
+                <li>
+                    <a href="">Private Policy</a>
+                </li>
+                <li>
+                    <a href="">Agreement</a>
+                </li>
+                <li>
+                    <a href="">About DECO & E</a>
+                </li>
+                <li>
+                    <a href="">Guide</a>
+                </li>
+                
+                
+            </ul>
+            <p class="cp">
+            <span>
+           PRIVACY POLICY
+           CS CENTER
+           MEMBERSHIP
+           27, WIRYESEONG-DAERO 22-GIL, SONGPA-GU, SEOUL, REPUBLIC OF KOREA   
+            </span>
+            <span>
+            CALL CENTER: TEL 02 2145 1300   COPYRIGHT©DECO&E LTD., ALL RIGHT RESERVED.
+            </span>
+            <span>
+            ADDRESS: 7F 82.SAEMUAN-RO, JONGNO-GU, SEOUL KOREA
+            </span>
+            <span>
+            사업자등록번호:101-86-56043
+            </span>
+            <span>
+            Copyright by Deco & E. All rights reserved
+            </span>
+            
+                
+            </p>
+        </nav>
+        
+    </div>
+</footer>
+    
+               
+     </header>
+    </div>   
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DECO & E</title>
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta http-equiv="refresh" content="180">
+
+<meta name="application-name" content="deco&e website">
+
+<meta name="author" content="lee hyun">
+
+<meta name="description" content="웹사이트 소개">
+
+<meta name="keywords" content="모던,방직,패션,섬유">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico">
+
+<link rel="icon" href="./ico/favicon.png">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/vend.microsoft.icon">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/x-icon">
+
+<meta name="msapplication-TitleColor" content="#FFFFFF">
+
+<meta name="msapplication-TitleImage" content="./ico/ms-ico/ms-icon-128.png">
+
+->
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+$(document).ready(function(){
+       var wd=parseInt($(window).width());
+        function rAni(){
+            $(".imgBox").not(":animated").animate({"margin-left" : -wd+"px"},
+                                                 
+                                                 800, function(){
+                $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                $(".imgBox").css("margin-left", "0px");
+            });
+        };
+        var intv = setInterval(function(){ rAni(); }, 3000);
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var ht=parseInt($(window).height());
+        $(window).on("mousewheel", function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                $("html, body").not(":animated").animate({scrollTop:"+="
++ht+"px"},1000);
+            } else {
+                $("html, body").not(":animated").animate({scrollTop:"-="+ht+"px"}, 1000);
+            }
+            return false;
+        })
+    })
+        
+
+    
+</script>
+
+<script>
+$(document).ready(function(){
+    var wd = parseInt($("#visual").width());
+    var cnt = $(".img_Box2 a").length;
+    var maxAni = (cnt-1)*wd*-1;
+    
+    function leftAni(){
+        var mar = parseInt($(".img_Box2").css("margin-left"));
+        if(mar<0){
+            $(".img_Box2").not(":animated").animate({"margin-left" : "+="+wd+"px"}, 800);
+        } 
+    }
+    function rightAni(){
+        var mar = parseInt($(".img_Box2").css("margin-left"));
+        if(mar>maxAni){
+            $(".img_Box2").not(":animated").animate({"margin-left" : "-="+wd+"px"}, 800);
+        } else{
+            $(".img_Box2").not(":animated").animate({"margin-left" : "0px"}, 800);
+        }
+    }
+    var intv = setInterval(function(){ rightAni(); }, 3000);
+    $("#btn_box .left").click(function (){
+        clearInterval(intv);
+        leftAni();
+        intv = setInterval(function(){ rightAni(); }, 3000);
+    });
+    $("#btn_box .right").click(function(){
+        clearInterval(intv);
+        rightAni();
+        intv = setInterval(function(){ rightAni(); }, 3000);
+    });
+});    
+</script>
+ 
+<script src="greenColor.js"></script>
+<script>
+$(document).ready(function(){
+    $(".cp").greenColor();
+    return this;
+});    
+    
+</script>
+
+<script src="slide.js"></script>
+<script>
+   $(document).ready(function(){
+    $(".banner").slide();
+    return this;
+});
+</script>
+
+<script src="mainban.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".banner").slide();
+        return this;
+    });
+
+</script>
+
+
+<meta name="sub1" content="로그인">
+<meta name="sub2" content="제품 페이지">
+<meta name="sub3" content="뉴스 페이지">
+<meta name="sub4" content="컨텍 페이지">
+<meta name="sub5" content="어바웃">
+<meta name="sub6" content="갤러리">
+
+
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="ft.css">
+
+<style>
+* { margin:0; padding:0; }
+    body, html { width:100%; height:100%; min-width:1200px; -ms-overflow-style:none; }
+    ::-webkit-scrollbar {display:none;}
+    ul { list-style:none; }
+    a { text-decoration:none; }
+    button, label, input[type=button], input[type=submit], input[type=reset] { outline:0; border:0;}
+    img { border:0; }
+</style>
+
+<style>    
+    .ckItem { display:none; }
+    #collapse { width:1900px; position:absolute; z-index:60; 
+        top:60px; left:calc(calc(100% - 1200px) / 2); display:none; font-family: "Bookman Old Style"; }
+    #ck1:checked ~ #collapse { display:block; }
+    .colMenu { width:239px; float:left; height:auto; 
+        background:#005295; border-right:1px solid #fff; }
+    .colMenu li { line-height:38px; }
+    .colMenu li.lstTit { background-color:#bc1a17; line-height:48px;  }
+    .colMenu li a { display:block; color:#fff; text-indent:20px; }
+    .lstBtn { display:block; width:40px;  height:40px;     border:1px solid #333;   padding:10px; box-sizing:border-box; padding-top:8px;
+        cursor:pointer; float:right;  }        
+    .line { display:block; width:18px; height:3px; margin-top:4px; 
+        background:#333; transition:0.5s; }
+    .line:nth-child(2) { width:12px; }
+    .lstBtn:hover .line:nth-child(2) { width:18px; }    
+</style>
+
+<style>
+    
+    .menu { width:100%; font-family: "나눔손글씨 펜";  }
+    .menuFrame { clear:both; width:800px; margin:20px auto; padding:5px; height:80px; }
+    .menu li { float:left; }
+    .menu a { color:#333; font-size:28px; font-weight:bold;
+        display:block; text-align:center; width:100%; 
+        height:45px; line-height:40px; transition:0.5s; }
+    #tnb { right:60px; font-family: "나눔손글씨 펜"; }
+    #tnb ul a { padding-left:18px; background-repeat:no-repeat;
+        background-position:left center; color:#333; font-size:28px; font-weight: bold;  }
+    #tnb ul a:hover { color:#bc1a17; }
+    #tnb { width:100%; height:24px; clear:both; padding-top:5px; }
+    #tnb .right { float:right; }
+    
+    #tnb li { float:left; padding-right:20px; }
+    #tnb .img {padding-left:10px;}
+    #tnb .left a { left:80px; top:30px; z-index:100; background-size:100% 100%; }
+    
+    #tnb li span {padding-left:10px;}
+    
+   
+    
+    #gnb li { width:20%; position:relative; height:48px; }   
+    #gnb a:hover { color:#bc1a17; }
+    #gnb li:after { content:" "; display:block; width:2px; height:2px; background:transparent; transition:0.5s; 
+        position:absolute; bottom:0px; right:0; }
+    #gnb li:hover:after { background:#bc1a17; width:100%; }
+    #gnb li:before { content:" "; display:block; width:2px; margin:0px auto; height:2px; background:transparent; 
+        transition:0.5s; left:0; top:0; }
+    #gnb li:hover:before { background:#bc1a17; width:100%; }
+    .ckItem {display:none;}
+    
+    #toTop { display:block; position:fixed; width:60px; height:60px;
+        background-image:url("./toTop.png"); background-repeat: no-repeat; background-position:center center; right:40px;
+        bottom:120px; display:none; }
+
+</style>
+
+<style>
+        .page {position: relative; width: 100%; height: 100%; overflow: hidden;}
+        .page img {display: block; width: 100%; height: 100%;}
+        
+        #vs {width: 100%; height: 100%; overflow: hidden;}
+        .imgBox {width: 400%; height: 100%;}
+        .imgBox li {float: left; width: 25%; height: 100%;}
+        .imgBox li a {display: block; width: 100%; height: 100%;}
+        .imgBox li a img {display: block; width: 100%; height: 100%;}    
+
+</style>
+
+<style>    
+    
+    #grid1 .grdBox { width: 90%; padding:40px; line-height: 70px;}
+    #grid1 .grdBox li { float:left; height:100%; margin-top:25px; margin-right:2% auto; } 
+    #grid1 .grdBox li.first { margin-left:180px; }
+    #grid1 .grdBox li.last { margin-right:0px; }
+   
+    
+</style> 
+
+<style>
+
+#page3 { margin:221px; line-height: 70px;}
+#page3 li {float: left;} 
+#page3 li a {display: block;}
+#page3 .c1 {margin-right:0px auto;}
+#page3 .c2 {margin-left: 150px;}
+
+</style>
+
+<style>
+
+#visual { width:200px; 
+    height:200px; 
+    margin:30px auto;
+    overflow:hidden; 
+    margin-top:100px; }
+
+.img_Box2 { width:800px; 
+        height:200px; }
+
+#visual a { display:block; 
+    width:200px; 
+    height:200px; 
+    float:left;
+    position:relative; }
+
+#visual img { display:block; 
+    width:200px; 
+    height:200px; }
+
+.num { display:block; 
+    color:black;	
+    background:yellow;
+    border-radius:20px; 
+    width:40px; 
+    height:40px; 
+    position:absolute;
+    z-index:10; 
+    top:20px; 
+    left:20px;
+    text-align:center;	
+    line-height: 40px; }
+
+#btn_box { width:200px; 
+    height:30px; 
+    margin:0px auto; }
+
+#btn_box a { display:block; 
+    width:30px; 
+    height:30px; 
+    cursor:pointer; }
+
+#btn_box .left { float:left; }
+
+#btn_box .right { float:right; 
+    text-align:right;} 
+
+</style>   
+
+<style>
+    .ft { clear:both; 
+        height:200px; 
+        width:100%;
+        background:#333; }
+    
+    .ftWrap { width:1240px; 
+        height:200px; 
+        margin:0 auto; 
+        background-image:url(""); 
+        background-position:left center; 
+        background-repeat:no-repeat; }
+     
+    .cp { clear:both; 
+         color:#fff; 
+         font-size:0.9em; 
+         line-height:3;
+         padding-left:15px; 
+         padding-top: 20px; }
+    
+</style>    
+    
+
+</head>
+<body>
+<div class="wrap">
+<header class=hd>
+<input type="checkbox" id="ck1" class="ckItem">
+<label for="ck1" class=lstBtn>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+        <div id="collapse">
+            <ul class="colMenu first">
+                <li class="lstTit">
+                <a href="sub5.html">COMPANY</a>
+                </li>
+                <li>
+                <a href="sub5.html">Deco's Vision</a> </li>
+                <li>
+                <a href="sub5.html">Deco's History</a>
+                </li>
+            </ul>
+            <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub2.html">BRAND</a>
+                </li>
+                <li>
+                <a href="sub2.html">Deco</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Cash</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Ana Capri</a>    
+                </li>
+                <li>
+                <a href="sub2.html">SIWY</a>    
+                </li>
+                <li>
+                <a href="sub2.html">96NY</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub3.html">DECO & ISSUE</a>
+                </li>
+                <li>
+                <a href="sub3.html">NEWS</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="">IR</a>
+                </li>
+                <li>
+                <a href="">Gallery</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub4.html">CONTACT US</a>
+                </li>
+                <li>
+                <a href="sub4.html">Location</a>    
+                </li>
+                <li>
+                <a href="sub4.html">Store</a>    
+                </li>
+            </ul>
+            <label for="ck1" class="closeBtn"></label>
+        </div>
+    
+   
+   <nav id="tnb">
+    <ul class="left">
+        <li><a href="index.html"><img src="images/LOGO.png"></a></li>
+    </ul>
+    <ul class="right">
+        <li><a href="sub1.html"><img class="a1"src="images/h_login.png"><span>로그인</span></a></li>
+        <li><a href="sub1.html"><img src="./images/h_signin.png"><span>회원가입</span></a></li>
+    </ul>
+</nav>
+<nav id="gnb" class="menu">
+    <ul class="menuFrame">
+        <li><a href="sub5.html">COMPANY</a></li>
+        <li><a href="sub2.html">BRAND</a></li>
+        <li><a href="sub3.html">DECO & ISSUE</a></li>
+        <li><a href="">IR</a></li>
+        <li><a href="sub4.html">CONTACT US</a></li>
+    </ul>
+</nav>
+</header>
+<section class="page" id="page1">
+    <div class="visualBox">
+        
+        <ul class="imgBox">
+            <li><a href="sub2.html"><img src="./images/main_ban_01.jpg" alt="메인베너"></a></li>
+            <li><a href="sub2.html"><img src="./images/main_ban_02.jpg" alt="메인베너"></a></li>
+            <li><a href="sub2.html"><img src="./images/main_ban_03.jpg" alt="메인베너"></a></li>
+            <li><a href="sub2.html"><img src="./images/main_ban_04.jpg" alt="메인베너"></a></li>
+            
+            
+            
+        </ul>
+        
+    </div>
+</section>
+<section class="page" id="page2">
+<div class="grd1" id="grid1">
+    <ul class="grdBox">
+        <li class="fd4 first">
+        <a href="sub2.html" class="bg1">
+        <img src="images/sub_ban_01.jpg">
+        </a></li>
+        
+        <li class="fd8 last">
+        <a href="sub2.html" class="bg2">
+        <img src="images/sub_ban_02.jpg">
+        </a></li>
+        
+        <li class="fd4 last">
+        <a href="sub2.html" class="bg3">
+        <img src="images/sub_ban_03.jpg">   
+        </a></li>
+        
+        <li class="fd7 last">
+        <a href="sub2.html" class="bg4">
+        <img src="images/sub_ban_04.jpg">
+        </a></li>
+        
+        <li class="fd1 last">
+        <a href="sub2.html" class="bg5">
+        <img src="images/sub_ban_05.jpg">   
+        </a></li>
+        
+    </ul>
+</div>    
+</section>
+<section class="page" id="page3">
+    <div class="about">
+        <ul>
+            <li class="c1 first"><a href="sub5.html"><img src="./images/about.jpg"></a></li>
+            <li class="c1 last"><a href="sub3.html"><img src="./images/issue.jpg"></a></li>
+            <li class="c1 last"><a href="sub2.html"><img src="./images/product.jpg"></a></li>
+            <li class="c2"><a href="sub4.html"><img src="./images/news.jpg"></a></li>
+        </ul>
+    </div>
+</section>
+
+<figure class="banner">
+    <section id="visual">
+        <div class="img_Box2">
+            <a href="">
+            <img src="./images/about.jpg" alt="about">
+            
+            </a>
+            <a href="">
+            <img src="./images/issue.jpg" alt="issue">
+            </a>
+            <a href="">
+            <img src="./images/product.jpg" alt="product">
+            </a>
+            <a href="">
+            <img src="./images/sub1_cash.jpg" alt="cash">
+            </a>
+        </div>
+    </section>
+    <section id="btn_box">
+    <a class="left">◀</a>
+    
+    <a class="right">▶</a>
+    </section>
+</figure>
+
+<footer class="ft">
+    <div class="ftWrap">
+        <nav class="fnb">
+            <ul>
+                <li>
+                    <a href="">Private Policy</a>
+                </li>
+                <li>
+                    <a href="">Agreement</a>
+                </li>
+                <li>
+                    <a href="">About DECO & E</a>
+                </li>
+                <li>
+                    <a href="">Guide</a>
+                </li>
+                
+                
+            </ul>
+            <p class="cp">
+            <span>
+           PRIVACY POLICY
+           CS CENTER
+           MEMBERSHIP
+           27, WIRYESEONG-DAERO 22-GIL, SONGPA-GU, SEOUL, REPUBLIC OF KOREA   
+            </span>
+            <span>
+            CALL CENTER: TEL 02 2145 1300   COPYRIGHT©DECO&E LTD., ALL RIGHT RESERVED.
+            </span>
+            <span>
+            ADDRESS: 7F 82.SAEMUAN-RO, JONGNO-GU, SEOUL KOREA
+            </span>
+            <span>
+            사업자등록번호:101-86-56043
+            </span>
+            <span>
+            Copyright by Deco & E. All rights reserved
+            </span>
+            
+                
+            </p>
+        </nav>
+        
+    </div>
+</footer>
+    
+               
+                        
+    
+    </div>
+<a href="" class="Totop">
+    <span>TOP</span>
+</a>    
+       
+</body>
+</html>

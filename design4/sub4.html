@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+    <title>contact 페이지</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" 
+    href="common.css">
+    <link rel="stylesheet" 
+    href="ft.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0. user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta http-equiv="refresh" content="180">
+
+<meta name="application-name" content="deco&e website">
+
+<meta name="author" content="lee hyun">
+
+<meta name="description" content="웹사이트 소개">
+
+<meta name="keywords" content="일신,방직,패션,섬유">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico">
+
+<link rel="icon" href="./ico/favicon.png">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/vend.microsoft.icon">
+
+<link rel="shortcut icon" href="./ico/favicon_128_icon.ico" type="image/x-icon">
+
+<meta name="msapplication-TitleColor" content="#FFFFFF">
+
+<meta name="msapplication-TitleImage" content="./ico/ms-ico/ms-icon-128.png">
+
+<style>
+.ft{background: #333;}
+#map_canvas { margin-bottom:40px; }
+
+#contact p { text-align:left;	padding-left:30px; line-height:30px; margin-top:25px;
+
+	padding-right:25px; }    
+
+</style>   
+
+<!--여기부터 -->
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+
+<script> 
+
+//좌표 값을 바꿔서 입력 36.3491563,127.3776857
+
+function initialize() {
+
+  var myLatlng = new google.maps.LatLng(36.3491563,127.3776857);
+
+  var mapOptions = {
+
+    zoom: 17,
+
+    center: myLatlng
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+ 
+
+  var marker = new google.maps.Marker({
+
+      position: myLatlng,
+
+      map: map,
+
+      title: '그린컴퓨터아트학원'	  //레이블을 바꿔서 입력
+
+  });
+
+}
+
+ 
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+ </script>
+
+<!-- 여기까지를 head태그 닫기 전에 복사해서 붙여넣기 -->
+
+
+<style>
+    .page {font-family: "나눔바른고딕";}
+    .proTit {text-align: center; font-size: 40px;}
+    .grd {display: block;}
+    
+    .grdBox1 .fd1 {padding-top:40px; }
+    .grdBox2 {margin-top:-550px; padding-left: 850px;}
+    .grdBox2 .fd2 {padding:20px;}
+    .grdBox2 .fd3 {padding:20px;} 
+    .grdBox2 .fd4 {padding:20px;}
+    .grdBox2 .fd5 {padding:20px;}
+    .grdBox2 span {margin:40px; font-weight: 600;}
+    
+</style>    
+
+
+
+</head>
+
+<body>
+<div class="wrap">
+<header class=hd>
+<input type="checkbox" id="ck1" class="ckItem">
+        <label for="ck1" class=lstBtn>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+
+        <div id="collapse">
+            <ul class="colMenu first">
+                <li class="lstTit">
+                <a href="sub5.html">COMPANY</a>
+                </li>
+                <li>
+                <a href="sub5.html">Deco's Vision</a> </li>
+                <li>
+                <a href="sub5.html">Deco's History</a>
+                </li>
+            </ul>
+            <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub2.html">BRAND</a>
+                </li>
+                <li>
+                <a href="sub2.html">Deco</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Cash</a>    
+                </li>
+                <li>
+                <a href="sub2.html">Ana Capri</a>    
+                </li>
+                <li>
+                <a href="sub2.html">SIWY</a>    
+                </li>
+                <li>
+                <a href="sub2.html">96NY</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub3.html">DECO & ISSUE</a>
+                </li>
+                <li>
+                <a href="sub3.html">NEWS</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="s">IR</a>
+                </li>
+                <li>
+                <a href="">Gallery</a>    
+                </li>
+            </ul>
+             <ul class="colMenu">
+                <li class="lstTit">
+                <a href="sub4.html">CONTACT US</a>
+                </li>
+                <li>
+                <a href="sub4.html">Location</a>    
+                </li>
+                <li>
+                <a href="sub4.html">Store</a>    
+                </li>
+            </ul>
+            <label for="ck1" class="closeBtn"></label>
+        </div>
+    
+   
+   <nav id="tnb">
+    <ul class="left">
+        <li><a href="index.html"><img src="images/LOGO.png"></a></li>
+    </ul>
+    <ul class="right">
+        <li><a href="sub1.html"><img src="images/h_login.png"><span>로그인</span></a></li>
+        <li><a href="sub1.html"><img src="./images/h_signin.png"><span>회원가입</span></a></li>
+    </ul>
+</nav>
+   <nav id="gnb" class="menu">
+    <ul class="menuFrame">
+        <li><a href="sub5.html">COMPANY</a></li>
+        <li><a href="sub2.html">BRAND</a></li>
+        <li><a href="sub3.html">DECO & ISSUE</a></li>
+        <li><a href="">IR</a></li>
+        <li><a href="sub4.html">CONTACT US</a></li>
+    </ul>
+</nav>
+   
+<section class="page" id="page1">
+    <h2 class="proTit"><span> Contact Us /    Location </span></h2>
+        
+        <div class="grd" id="grd1">
+        
+        <ul class="grdBox1">
+            <li class="fd1"><a href=""><img src="./images/map.JPG" alt="지도"></a></li>
+        </ul>    
+        
+        <ul class="grdBox2">    
+            <li class="fd2"><a href=""><img src="./images/contact.png" alt="위치"><span>Address<br><br>서울특별시 송파구 오금동 24-2 (주)데코앤이<br><br>서울특별시 송파구 위례성대로 22길 27</span></a></li>
+            <li class="fd3"><a href=""><img src="./images/mail.png" alt="메일"><span>E-mail<br><br>CS@deco.co.kr</span></a></li>
+            <li class="fd4"><a href=""><img src="./images/tel.png" alt="전화"><span>TEL<br><br>02-2145-1300(본사)<br><br>080-431-5500(A/S 및 고객센터)</span></a></li>
+            <li class="fd5"><a href=""><img src="./images/time.png" alt="시간"><span>운영시간<br><br>9시~18시(월~금)/주말 및 공휴일 휴무</span></a></li>
+        </ul> 
+        
+            
+        </div>
+    
+</section>
+   
+    <footer class="ft">
+    <div class="ftWrap">
+        <nav class="fnb">
+            <ul>
+                <li>
+                    <a href="">Private Policy</a>
+                </li>
+                <li>
+                    <a href="">Agreement</a>
+                </li>
+                <li>
+                    <a href="">About DECO & E</a>
+                </li>
+                <li>
+                    <a href="">Guide</a>
+                </li>
+                
+                
+            </ul>
+            <p class="cp">
+            <span>
+           PRIVACY POLICY
+           CS CENTER
+           MEMBERSHIP
+           27, WIRYESEONG-DAERO 22-GIL, SONGPA-GU, SEOUL, REPUBLIC OF KOREA   
+            </span>
+            <span>
+            CALL CENTER: TEL 02 2145 1300   COPYRIGHT©DECO&E LTD., ALL RIGHT RESERVED.
+            </span>
+            <span>
+            ADDRESS: 7F 82.SAEMUAN-RO, JONGNO-GU, SEOUL KOREA
+            </span>
+            <span>
+            사업자등록번호:101-86-56043
+            </span>
+            <span>
+            Copyright by Deco & E. All rights reserved
+            </span>
+            
+                
+            </p>
+        </nav>
+        
+    </div>
+</footer>   
+    </header>
+    </div>    
+</body>
+</html>
