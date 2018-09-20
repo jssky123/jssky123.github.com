@@ -1,0 +1,46 @@
+@charset "utf-8";
+.lstBtnFrame { position:fixed; right:20px; top:5px; z-index:99;
+    width:50px; height:50px; }
+.lstBtnGroup { border:1px solid #333; width:24px; height:18px;
+padding:15px 12px; }
+.lstLine { display:block; width:24px; height:3px; margin-bottom:6px;
+    background:#333; }
+
+.contactBtnFrame { position:fixed; right:0px; top:42%;
+z-index:99; width:40px; height:70px; background:#fff; }
+.conTitle { font-size:52px; font-weight:900; }
+.conBtnGroup { width:30px; height:30px; }
+.conLine { display:block; width:20px; height:1px;     
+    background:#333; margin:0 auto; margin-bottom:4px;}
+
+.lstFrame { width:100%; height:100%; background:#fff;
+position:fixed; right:-110%; top:0; z-index:9999;  }
+#gnb { position:relative; width:100%; height:100%;}
+#gnb .menu { clear:both; padding-top:20%; }
+#gnb .menu a { color:#333; font-size:36px; line-height:60px; 
+    text-align:center; display:block; }
+.closeBtn { clear:both; display:block; width:50px; height:50px; border:1px solid #333; background-image:url("./images/ic_close.png"); background-position:center center; margin-right:10%; float:right; margin-top:5%; background-repeat:no-repeat; }
+#gnb .linkGroup { position:absolute; bottom:0px; height:48px;
+    width:100%; left:0; border-top:1px solid #333; }
+#gnb .linkGroup li { float:left; width:33%;}
+#gnb .linkGroup a { color:#333; font-size:0.8em; display:block; 
+    text-align:center; line-height:48px;}  
+
+
+.contactFrame {  width:100%; height:100%; background:rgba(0,0,0,0.96);
+position:fixed; right:-110%; top:0; z-index:9999; }
+.contactTitle {line-height:50px; color:#fff; 
+    text-indent:5%; font-size:38px; }
+#frm1 { width:80%; margin:5% auto;}
+#frm1 input, #frm1 select, #frm1 textarea {     background: transparent;    border: 0;
+border-bottom:1px solid #949494;    font-family: 'Poppins', sans-serif;
+letter-spacing:0.5px;    opacity:0.5; color: #a5a5a5; 
+-webkit-appearance:none; outline:none;      margin:0;    width:100%;    display:block;     padding:5px !important;
+margin-bottom:5px !important; font-size:14px;  line-height:1.6;
+font-weight:300;     user-select:text;    cursor:auto; }
+#frm1 .select div { display:none; }
+#frm1 #your-files { display:none; }
+#frm1 .contact_label { position:absolute; right:5%; top:5px; }
+#frm1 .contact_sub input { color:#fff; font-size:24px; 
+    border:0; outline:0; float:right; display:inline-block; 
+    width:80px; opacity:1; font-weight:900; }
