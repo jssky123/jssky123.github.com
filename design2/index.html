@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>세종시 복숭아 축제</title>
+    
+    
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="hd.css">
+     
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        var wd=parseInt($(window).width());
+        function rAni(){
+            $(".imgBox").not(":animated").animate({"margin-left" : -wd+"px"},800, function(){
+                $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                $(".imgBox").css("margin-left", "0px");
+            });
+        };
+        var intv = setInterval(function(){ rAni(); }, 3000);
+    });
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+        var ht=parseInt($(window).height());
+        $(window).on("mousewheel", function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                $("html, body").not(":animated").animate({scrollTop:"+="+ht+"px"}, 1000);
+            } else {
+                $("html,body").not(":animated").animate({scrollTop:"-="+ht+"px"}, 1000);
+            }
+            return false;
+        })
+    })
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+        var wd = parseInt($("#visual").width());
+        var cnt = $(".imgBox2 a").length;
+        var maxAni = (cnt-1)*wd*-1;
+        
+        function leftAni(){
+            var mar = parseInt($(".imgBox2").css("margin-left"));
+            if(mar<0){
+                $(".imgBox2").not(":animated").animate({"margin-left" : "+="+wd+"px"}, 800);
+            }
+        }
+        function rightAni(){
+            var mar = parseInt($(".imgBox2").css("margin-left"));
+            if(mar>maxAni){
+                $(".imgBox2").not(":animated").animate({"margin-left" : "-="+wd+"px"}, 800);
+            } else {
+                $(".imgBox2").not(":animated").animate({"margin-left" : "0px"}, 800);
+            }
+        }
+        var intv = setInterval(function(){ rightAni(); }, 3000); $("#btn_box .left").click(function (){
+            clearInterval(intv);
+            leftAni();
+            intv = setInterval(function(){ rightAni(); }, 3000);
+        });
+        $("#btn_box .right").click(function(){
+            clearInterval(intv);
+            rightAni();
+            intv = setInterval(function(){ rightAni(); }, 3000);
+        });
+    });
+    </script>
+    
+    <style>
+    
+    * { margin:0; padding:0; }
+    ul { list-style:none; }
+    li {list-style: none;}
+    a { text-decoration: none; }
+        
+    </style>
+    
+    <style>
+    
+    #gnb { float:left; margin-left:0; position:fixed; text-align: center;}
+    #gnb li { float:left; padding: 10px; position:relative; }
+    .sub { display:none; position:absolute; left:0; width:120px; 
+        height:auto; background:rgba(0,0,0,0.7); }
+    .dep1 { color:#333; font-weight:bold; }
+    .dep1:hover { color:#c00; } 
+    .dep1:before { content:""; display:block; width:100px; height:3px; 
+        background:#333; margin:5px auto; }
+    .dep1:after { content:""; display:block; width:100px; height:3px; 
+        background:#333; margin:5px auto; }
+    #gnb li:hover .dep1:before {  background:#c00; }
+    #gnb li:hover .dep1:after {  background:#c00; }
+    #gnb li:hover .dep1 { color:#c00; }
+    #gnb li:hover .sub { display:block; }
+    #gnb .sub li { clear:both; height:40px;  padding:0; width:100%; }    
+    .sub li a { color:#fff; display:block; line-height:40px; 
+        text-align:center; width:100%;}
+    
+    </style>
+    
+    <style>    
+    
+    .img_Box {width:100%; height:100%;}
+    
+        
+        
+    #visual { width:200px; 
+    height:200px; 
+    margin:30px auto;
+    overflow:hidden; 
+    margin-top:100px; }
+
+.img_Box2 { width:800px; 
+        height:200px; }
+
+#visual a { display:block; 
+    width:200px; 
+    height:200px; 
+    float:left;
+    position:relative; }
+
+#visual img { display:block; 
+    width:200px; 
+    height:200px; }
+
+.num { display:block; 
+    color:black;	
+    background:yellow;
+    border-radius:20px; 
+    width:40px; 
+    height:40px; 
+    position:absolute;
+    z-index:10; 
+    top:20px; 
+    left:20px;
+    text-align:center;	
+    line-height: 40px; }
+
+#btn_box { width:200px; 
+    height:30px; 
+    margin:0px auto; }
+
+#btn_box a { display:block; 
+    width:30px; 
+    height:30px; 
+    cursor:pointer; }
+
+#btn_box .left { float:left; }
+
+#btn_box .right { float:right; 
+    text-align:right;} 
+        
+        
+     
+        
+        
+    
+        
+     </style>   
+      
+     <style>       
+        
+        .proBox { width:100%; height:100%; }
+        .proBox li { float:left; width:100%; height:100%; overflow:hidden; }
+        .proBox li img {display:block; width:1902px; height:951px;
+            border-radius:200px; overflow:hidden; position:absolute;
+            top:2900px; right:-150px; margin-right: -90px; padding:10px; }
+      
+        .col {color:hotpink; display:block; float:left;
+            width:200px; margin-right:10px;}
+        .col img { width:200px; height:auto; }
+        
+        .proTitle2 { white-space:nowrap; font-size:1.1em; line-height:10;}
+    
+    </style>   
+       
+    <style>   
+        
+        .grid1 { margin:0px auto; width: 100%; height: 100%;}
+        .grid1 a { float:left; position:relative;}
+        .grid1 #im1 {right:80px;}
+        .grid1 #im2 {top:-500px; left:80px;}
+        .grid1 #im3 {top:-600px; left:-60px;}
+        .grid1 #im4 {top:-700px; left:-215px;}
+        
+    </style>
+        
+    
+    <style>  
+    
+    .pTit { padding-left:125px; padding-top:50px; font-size:18px; 
+        color:#666; }
+    .pCom { padding-left:490px; top:90px; font-size:14px;
+        padding-right:15px; color:#999; padding-top:5px; }
+    .pLt { padding-left:15px; 
+        background-repeat: no-repeat; background-position:left center; }
+    .rPlt { color:#c00; padding-left:15px; }
+    .pblk { padding-left:50px; }
+    #schFrm { padding: 20px; margin-bottom: 10px; margin-left:500px;}
+         
+       
+    .gallery {float:left; position:relative; padding: 20px; margin:20px auto; left:120px;} 
+    
+    </style>
+    
+    <style>
+    .ft { clear:both; 
+        height:200px; 
+        width:100%;
+        background:#333; }
+    
+    .fnb a { 
+            clear: both;
+            color:#fff;
+            font-size: 0.9em;
+            line-height: 3;
+            margin: 0 auto; }
+      
+     
+    .copyright { clear:both; 
+         color:#fff; 
+         font-size:0.9em; 
+         line-height:3;
+         padding-left:15px; 
+         padding-top: 20px; }
+    
+</style>    
+</head>
+<body>
+ <div class="wrap">
+    <header class="hd">   
+    <nav id="gnb">
+        <ul>
+            <li>
+                <a href="" class="dep1">Home</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">2018축제</a></li>
+                        <li><a href="">세종시투어</a></li>
+                        <li><a href="">축제참여하기</a></li>
+                        <li><a href="">갤러리</a></li>
+                        <li><a href="">보도자료</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="" class="dep1">2018축제</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">축제안내</a></li>
+                        <li><a href="">축제일정</a></li>
+                        <li><a href="">더보기</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="" class="dep1">세종시 투어</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">추천맛집</a></li>
+                        <li><a href="">모범숙박업소</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="" class="dep1">축제참여하기</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">백일장</a></li>
+                        <li><a href="">사진대회</a></li>
+                        <li><a href="">자원봉사 </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="" class="dep1">갤러리</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">수상작품</a></li>
+                        <li><a href="">내 작품 보기</a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </li>
+         <li>
+                <a href="" class="dep1">로그인</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="">로그인 </a></li>
+                        <li><a href="">회원가입 </a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </li>
+        </ul>
+   
+     </nav>
+    
+     <div class="page" id="main">
+         
+    
+    
+    <ul class="imgBox">
+        <li>
+            <visual><a href="">
+            <img src="images/1_banner_1.png" alt=배너1>
+               </a>    
+               <a href="" class="more"></a>
+            </visual>
+        </li>
+        <li>
+            <visual><a href="">
+            <img src="images/1_banner_2.png" alt=배너2></a>    
+               <a href="" class="more"></a>
+            </visual>
+        </li>
+        <li>
+            <visual><a href="">
+            <img src="images/1_banner_3.png" alt=배너3>   
+               </a> 
+               <a href="" class="more"></a>
+            </visual>
+        </li>
+    </ul> 
+      
+    
+      <ul class="img_Box">
+        <li>
+            <a href="index.html" class="box1"><img src="./images/1_guide.png">축제일정</a>
+        </li>
+        <li>
+            <a href="index.html" class="box2"><img src="./images/1_join.png">행사안내</a>
+        </li>
+        <li>
+            <a href="index.html" class="box3"><img src="./images/1_schedule.png">참여신청</a>
+        </li>
+    </ul>
+      
+                  
+     </div>
+    
+      
+   
+     <section class="page" id="page2">
+          <div class="grid1">
+          <a href="" id="im1">
+          <img src="./images/4_recruit.png" alt="행사참여">
+          </a>
+          <a href="" id="im2">
+          <img src="./images/4_icom.png" alt="체크박스">
+          백일장</a>
+          <a href="" id="im3">
+          <img src="./images/4_icom.png" alt="체크박스">
+          사진대회</a>
+          <a href="" id="im4">
+          <img src="./images/4_icom.png" alt="체크박스">
+          자원봉사</a>
+          
+          </div>
+      </section>
+  
+    <section class="page" id="page3">
+        
+      <div class="pBox">
+                        <h3 class="pTit">제7회 세종시 복숭아 봄꽃축제 SNS 공모전</h3>
+                        <p class="pCom"><span class="pLt">접수기간</span> : 2018. 6. 10 ~ 7. 10 <br>
+    <span class="pLt">공모자격</span>: 누구나 (지역·연령 제한 없음)<br/>
+    <span class="pLt">공모대상</span> : 2017. 5. 12. ~ 208. 5. 18. 해당기간 동안 작성 또는 촬영한 작품<br/>
+    <span class="pLt">공모주제</span> : 세종시 봄꽃 축제 <br/>
+    <span class="pblk">(단, 1개의 주제는 꼭 정해야 함.)</span><br/>
+    <span class="pblk">예시) </span><br/>
+    <span class="pLt">문의처</span> : 세종시 관광과 (☎ 044 300-2515)<br/>
+    <span class="rPlt">※ 공모전 상세보기를 꼭 확인하신 후 응모바랍니다.</span><br/>
+    <span class="rPlt">※ 공모전 양식 (신청서 · 서약서 · 개인정보동의서) 작성은 필수입니다.</span></p>
+        </div>  
+      <div class="sch">
+                        <form action="" id="schFrm">
+                            <select name="" id="sel">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="author">작성자</option>
+                            </select>
+                            <input type="text" id="schTxt">
+                            <input type="submit" value="검색" id="schBtn">
+                        </form>
+                    </div>  
+  
+    <figure class="banner">
+        <section id="visual">
+            <div class="img_Box2">
+                <a href="mailto:hyunlee11@naver.com"><img src="./images/5_gold.png" alt="gold"></a>
+                <a href=""><img src="./images/5_silver.png" alt="silver"></a>
+                <a href=""><img src="./images/5_bronze.png" alt="bronze"></a>
+            </div>
+        </section>
+        <section id="btn_box">
+        
+        <a class="left">◀</a>
+        
+        <a class="right">▶</a>
+        
+        </section>
+    </figure>
+      
+        
+          
+            
+ </section>
+  <footer class="ft">
+      <div class="ftWrap">
+         <nav class="fnb">
+          <ul>
+              <li>
+              <a href="">문의 Tel : 044) 300-2515 </a>
+              </li>
+          </ul>
+      </nav>
+      
+      <p class="copyright">
+          
+          
+    <span><br>Copyright By SEJONGJOCHIWON PEACH FESTIVAL. </span>  
+
+
+    <span><br>All Rights Reserved.</span>
+         
+    </p>
+    </div>
+  </footer> 
+   
+        </header>
+    </div>  
+</body>
+</html>

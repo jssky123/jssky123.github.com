@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드시스템</title>
+    <style>
+        * { margin:0; padding:0;}
+        body, html {width: 100%; height:100%;}
+        ul {list-style: none;}
+        
+        .pg {width: 100%; height: 100%;}
+        #con2{}
+        .grid {width: 1200px; height: auto; margin: 0 auto;}
+        .col {width: 600px; height: 554px; position: relative;}
+        .left {float:left;}  
+        .right {float:right;}
+        .box {float:left; width: 300px; height: 277px;}
+       
+        
+        
+        
+        
+        .boxTit { text-align: center; color:#fff;}
+        .boxTit2 { text-align: center; color:#fff;}
+        .boxTit2: after {content:""; display:block; width:40px; height:1px;
+            border-bottom:2px solid #333; margin:5px auto;}
+        .icoList li {width:149px; height:111px;}
+        .icoList1 {background-image:url(images/2_transport_1.png);}
+        .icoList1 a:hover {text-decoration: underline;}
+        .more {display:block; width:87px; height:97px;
+            background-image:url(images/2_transport_2.png); margin:25px auto;}
+        .mvIco {display:block; width:1902px; height:951px; background-image: url(images/3_hotel.png); 
+            margin:20px auto;}
+        .mvIco:before {content:""; display:block; width:270px; 
+            height:247px; border:1px solid #fff; position:absolute; top:14px; left:14px;}
+        #box42.mvIco {margin-top:100px;}
+        
+        
+        
+        
+        
+        #box11 {background-color: #333;}
+        #box12 {background-color: #aaa;}
+        #box13 {background-color: #ccc;}
+        #box14 {background-color: #eee;}
+        
+        #box24 {background-color: #888; position: absolute; bottom:0; right:0;}
+       
+        #box34 {background-color: #1094a6;position: absolute; top:0; left:0;}
+        
+        #box41 {background-color: #3cde57;}
+        #box42 {background-color: #9b8e91;}
+        #box43 {background-color: #1d3e32;}
+        #box44 {background-color: #8c3d34;}
+        
+        .raItem {display:none;}
+        .imgBox1 {width:800%;}
+        .imgBox1 li {float:left; width:0px; background-size:100% 100%;
+            background-repeat: no-repeat; background-position: center center; 
+            height:554px; opacity:0; transition:0.5s;}
+        .imgBox1 .item1 {background-image: url(images/1_banner_1.png);}
+        .imgBox1 .item2 {background-image: url(images/1_banner_2.png);}
+        .imgBox1 .item3 {background-image: url(images/1_banner_3.png);}
+        
+        #ra11:checked ~ .imgBox1 .item1 {width:600px; opacity:1;}
+        #ra12:checked ~ .imgBox1 .item2 {width:600px; opacity:1;}
+        #ra13:checked ~ .imgBox1 .item3 {width:600px; opacity:1;}
+        
+        .banTit1, .banTit2, .banCom {color:#fff; padding-left: 25px; line-height: 2;
+            padding-top:25px;}
+        .banTit2 {text-shadow: 2px 2px 3px #333;}
+        .banCom {line-height: 1.3; padding-top: 40px;}
+        #vs1 {overflow:hidden;}
+        
+        #ra11: checked ~ #box24 .item1 {background-image: url(images/4_icom.png);
+            background-repeat: no-repeat; background-position: 8px center;}
+        #ra12: checked ~ #box24 .item2 {background-image: url(images/4_icom.png);
+            background-repeat: no-repeat; background-position: 8px center;}
+        #ra13: checked ~ #box24 .item3 {background-image: url(images/4_icom.png);
+            background-repeat: no-repeat; background-position: 8px center;}
+        
+        
+        
+    
+    </style>
+</head>
+<body>
+    <section id="con2" class="pg">
+        <div class="grid">
+            <div class="col left">
+                <div class="box" id="box11">
+                    <h3 class="boxTit">가나다라마바사</h3>
+                    <p class="boxCom">
+                    <br/>거제여행을 위한 필수 앱을 다운로드 받으세요</p>
+                    <ul class="icoList1">
+                        <li class="left"><a href="and">안드로이드</a></li>
+                        <li class="right"><a href="iphone">아이폰</a></li>
+                    </ul>
+                </div>
+                
+                <div class="box" id="box12">
+                     <h3 class="boxTit">홍보동영상</h3>
+                     <a href="" class="mvIco"></a>
+                </div>
+                
+                <div class="box" id="box13">
+                    <h3 class="boxTit">아자카차타파하</h3>
+                <p class="boxCom">오랜 세월 자연이 빚어낸 아름다운 보석!
+                <br/>섬과 섬을 잇는 아름다운 길</p>
+                <a href="" class="more"></a>
+                </div>
+                
+                <div class="box" id="box14">
+                     <h3 class="boxTit">섬안의 섬여행 </h3>
+                     <ul class="icoLst2">
+                         <li><a href="">외도</a></li>
+                     </ul>
+                </div>
+            
+            </div>
+            
+            <div class="col right" id="vs1">
+                <div class="box" id="box24">
+                     <h3 class="boxTit">아자카차타파하</h3>
+                     
+                     <p class="boxCom"></p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col left" id="vs2">
+                <div class="box" id="box34">
+                    <h3 class="boxTit2">아자카차타파하</h3>
+                     <p class="boxCom">23</p>
+                </div>
+                
+            </div>
+            <div class="col right">
+                <div class="box" id="box41">
+                 <h3 class="boxTit2">아자카차타파하</h3>
+                     <p class="boxCom"></p>
+                </div>
+                <div class="box" id="box42">
+                     <h3 class="boxTit2">아자카차타파하</h3>
+                     <p class="boxCom"></p>
+                </div>
+                <div class="box" id="box43">
+                     <h3 class="boxTit2">아자카차타파하</h3>
+                     <p class="boxCom"></p>
+                </div>
+                <div class="box" id="box44">
+                     <h3 class="boxTit2">아자카차타파하</h3>
+                     <p class="boxCom"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

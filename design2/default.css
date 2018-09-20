@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+    <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>세종시 복숭아 봄꽃축제</title>
+   
+     <link rel="stylesheet" href="font.css">
+    
+       <style>
+        * {margin:0; padding:0;}
+        li{list-style: none;}
+        body, html { font-family: "lr","BMDOHYEON","BMYEONSUNG"; }
+        
+           
+        .wrap {width: 100%;}
+        ul {list-style: none;}
+        a {text-decoration: none;}

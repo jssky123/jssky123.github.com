@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; }
+    ul { list-style:none; }
+    li {list-style: none;}
+    a { text-decoration: none; }
+    
+    #gnb { float:left; margin-left:0; position:fixed; text-align: center;}
+    #gnb li { float:left; padding: 10px; position:relative; }
+    .sub { display:none; position:absolute; left:0; width:120px; 
+        height:auto; background:rgba(0,0,0,0.7); }
+    .dep1 { color:#333; font-weight:bold; }
+    .dep1:hover { color:#c00; } 
+    .dep1:before { content:""; display:block; width:100px; height:3px; 
+        background:#333; margin:5px auto; }
+    .dep1:after { content:""; display:block; width:100px; height:3px; 
+        background:#333; margin:5px auto; }
+    #gnb li:hover .dep1:before {  background:#c00; }
+    #gnb li:hover .dep1:after {  background:#c00; }
+    #gnb li:hover .dep1 { color:#c00; }
+    #gnb li:hover .sub { display:block; }
+    #gnb .sub li { clear:both; height:40px;  padding:0; width:100%; }    
+    .sub li a { color:#fff; display:block; line-height:40px; 
+        text-align:center; width:100%;}
+        
+    .imgBox {width:100%; height:951px; transition:1s; overflow:hidden;}
+    .imgBox li {float:left; width:1902px; height:951px; }
+        
+    .more {position:absolute; width:120px; display:block; 
+            line-height:40px; text-align:center; background:#a0cd3f;
+            border-radius:21px; bottom:250px; right:100px; color:#fff;}
+        
+    .imgBox2 {float:left; position:relative; clear:both; padding: 0px 50px; line-height: 100px; font-size: 13px;}
+    .imgBox2 li a {color:#9ac715; line-height:100px; padding:10px; font-size: 20px;}                        
+        
+    .titBox {color:#fff; position:absolute; top:150px; left:0; width:100%;}
+       
+       
+    .btnBox {width:58px; height:8px; margin:12px auto;}
+    .btnBox li {margin-right:4px; float:left;}
+    .btnBox .btn {display:block; width:8px; height:8px; 
+            outline:0; border:0; background:#333; border-radius:5px; 
+            text-indent:-9999px; border:1px solid transparent; cursor:pointer;}
+        
+        
+     #ra1:checked ~ #vs #imgBox {margin-left:0;}
+     #ra2:checked ~ #vs #imgBox {margin-left:-1902px;}
+     #ra3:checked ~ #vs #imgBox {margin-left:-3804px;}
+        
+     #ra1:checked ~ #vs #btnBox .item1 {background:#7b14e5; border:1px solid #fff;}
+     #ra2:checked ~ #vs #btnBpx .item2 {background:#7b14e5; border:1px solid #fff;}
+      #ra3:checked ~ #vs #btnBox .item3 {background:#7b14e5; border:1px solid #fff;}
+     #ra1,#ra2,#ra3,#ra4 {display:none;}
+        
+        
+        
+        .box1 { top:40; left:50; width:1902px; height:951px; }
+        .box2 { top:50px; width:400px; height:440px; }
+        .box2.item1 { left:-350px; }
+        .box2.item2 { left:700px; height: 800px; top:670px;}
+        .box4{ right:-900px; top:750px; width:1330px; height:280px; left:700px; }
+        .box5{ top:680px; left:775px; }
+        
+        
+        
+        .proBox { width:100%; height:100%; }
+        .proBox li { float:left; width:100%; height:100%; overflow:hidden; }
+        .proBox li img {display:block; width:1902px; height:951px;
+            border-radius:200px; overflow:hidden; position:absolute;
+            top:2000px; right:-150px; margin-right: -90px; padding:10px; }
+        .comment {background-image: url(images/3_bg.png); width:100%; height:951px; 
+            left:0px; top:100px; z-index:10; background-size: 100% 100%; 
+            background-repeat:no-repeat; margin-top: 600px; padding:10px;}
+        .col {color:hotpink; display:block; float:left;
+            width:200px; margin-right:10px;}
+        .col img { width:200px; height:auto; }
+        
+        .proTitle2 { white-space:nowrap; font-size:1.1em; line-height:10;}
+        
+        
+        .grid1 { margin:0px auto; width: 100%; height: 100%;}
+        .grid1 a { float:left; position:relative;}
+        .grid1 #im1 {right:80px;}
+        .grid1 #im2 {top:-500px; left:80px;}
+        .grid1 #im3 {top:-600px; left:-60px;}
+        .grid1 #im4 {top:-700px; left:-215px;}
+        
+        
+        
+    
+    
+    .pTit { padding-left:125px; padding-top:50px; font-size:18px; 
+        color:#666; }
+    .pCom { padding-left:490px; top:90px; font-size:14px;
+        padding-right:15px; color:#999; padding-top:5px; }
+    .pLt { padding-left:15px; 
+        background-repeat: no-repeat; background-position:left center; }
+    .rPlt { color:#c00; padding-left:15px; }
+    .pblk { padding-left:50px; }
+    #schFrm { padding: 20px; margin-bottom: 10px; margin-left:500px;}
+         
+       
+    .gallery {float:left; position:relative; padding: 20px; margin:20px auto; left:120px;} 
+       
+       

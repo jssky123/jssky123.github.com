@@ -1,0 +1,33 @@
+@charset "uft-8";
+@font-face {
+    font-family: "lr";
+    src: local("LABRATB_"),
+         local("LABRATB_")
+         
+         url("../font/LABRATB_.eot") format("embedded-opentype"),
+         url("../font/LABRATB_.woff") format("woff"),
+         url("../font/LABRATB_.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "BMDOHYEON";
+    src: local("BMDOHYEON"),
+         local("BMDOHYEON")
+         url("../font/BMDOHYEON_.otf") format("opentype"),
+         url("../font/BMDOHYEON_.eot") format("embedded-opentype"),
+         url("../font/BMDOHYEON_.woff") format("woff"),
+         url("../font/BMDOHYEON_.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "BMYEONSUNG";
+    src: local("BMYEONSUNG"),
+         local("BMYEONSUNG")
+         url("../font/BMYEONSUNG_.otf") format("opentype"),
+         url("../font/BMYEONSUNG_.eot") format("embedded-opentype"),
+         url("../font/BMYEONSUNG_.woff") format("woff"),
+         url("../font/BMYEONSUNG_.ttf") format("truetype");
+
+}
