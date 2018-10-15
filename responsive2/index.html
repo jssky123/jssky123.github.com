@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <meta http-equiv="refresh" content="180">
+    
+    <meta name="application-name" content="panasonic">
+    <meta name="author" content="lee hyun">
+    <meta name="description" content="electronics">
+    <meta name="keywords" content="카메라 가전제품 랜즈 파나소닉">
+    
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/X-icon"> 
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64 72x72 96x96 129x129" href="./images/favicon/ico" type="image/X-icon">
+    
+    <link rel="apple-touch-icon-precomposed" href="./images/favicon.JPG">
+    
+    <meta name="msapplication-TitleColor" content="#FFFFFF">
+    
+    <meta name="msapplication-TitleImage" content="./images/favicon.JPG">
+    
+    <title>::: 한국기계전기전자시험연구원 :::</title>
+    
+    <link rel="shortcut icon" href="./images/favicon/64x64.ico" type="image/vnd.microsoft.icon"> 
+    <!-- Still works in IE6+ series3 -->
+    <link rel="shortcut icon" href="./images/favicon/64x64.ico" type="image/x-icon"> 
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    
+    
+    <style>
+    * { margin:0; padding:0; }    
+    button, a, label, input { outline:0; border:0; text-decoration:none; background:transparent; }
+    ul { list-style:none; }
+    body, html { width:100%; height:100%;  font-family:'Noto Sans KR', sans-serif; }    
+       
+    .mo { display:block; }
+    .mo.hd { width:100%; height:60px; overflow:hidden; 
+        position:relative; text-align:center; padding-top:10px;
+        box-sizing:border-box; border-bottom:1px solid #ffffff; 
+        background:#f29c09; } 
+    
+    .fs30 { font-size:30px; color:#fff; }    
+    .mo.hd .home { position:absolute; top:15px; left:15px; 
+        z-index:20;}
+    .mo.hd .lst { position:absolute; top:15px; right:15px; 
+        z-index:20; }
+    .wrap { clear:both; width:calc(100% + 200px); height:100%; }
+    
+    .content { float:left; border-top:1px solid #111; 
+        width:calc(100% - 200px); }
+    
+    .vs { display:block; 
+         width: 100%;
+        height: 100%;
+        clear: both;
+        overflow: hidden; 
+        
+       }
+    
+    .vs img { clear:both; display:block; width:100%; }   
+    
+  
+    
+    #btnGroup { width:100%; clear:both; }
+    
+    #btnGroup li { float:left; padding: 10px;  }
+
+    #btnGroup label { color:#333; 
+            display:block; 
+            background-color:#fff; 
+            width:40px; 
+            text-align:center; 
+            line-height:40px; }
+    
+    #btnGroup label.on { color:#fff; background-color:#333; }        
+        
+   
+   
+    .pageTit { line-height:2.4; text-align:center; }
+    .product { width:100%; }
+    .product .col { float:left; width:100%; position:relative; } 
+    .product .col a { display:block; text-align:center; }
+    
+    .proTit { line-height:2.8; color:#333; }
+     
+    .num { color:#666; }
+    
+    .com { color:#333; padding:20px; }
+        
+        
+    .ft { clear:both; height:85px; width:100%; background:#333; }
+    #fnb { width:90%; margin:10px auto; }
+    #fnb li { float:left; width:25%; }
+    #fnb li a { display:block; font-size:0.8em; color:#fff; 
+        line-height:1.8; text-align:center; }
+    .copyright { text-align:center; clear:both; font-size:0.8em; 
+        color:#fff; border-top:1px solid #555; line-height:50px; }
+        
+        
+    .ck { display:none; }
+    .gnb { width:200px; height:100%; background:rgba(200, 200, 200, 0.8); margin-left:-200px; transition:0.6s; float:left; }
+    .gnb li { line-height:36px; border-bottom:1px solid #666; 
+        background:#333;  border-top:1px solid #000; }
+    .gnb a { display:block; text-indent:20px; line-height:36px; 
+        color:#fff;      }
+    #menu_call:checked ~ .wrap .gnb { margin-left:0; }
+    #menu_call:not(:checked) ~ .hd .lst .fa-bars { display:block; }
+    #menu_call:not(:checked) ~ .hd .lst .fa-times { display:none; }
+    #menu_call:checked ~ .hd .lst .fa-bars { display:none; }
+    #menu_call:checked ~ .hd .lst .fa-times { display:block; }
+    .desk { display:none; }
+    #menu { clear:both; width:100%; text-align:center; }
+    #menu .menu { clear:both; }
+    #menu li { float:left; width:25%; line-height:40px; }
+    #menu li a { display:block; background:#f29c09; color:#fff;
+        font-size:0.9em; text-align:center; line-height:40px; }  
+    
+    @media screen and (max-width:767px){
+            .mobile {display: block;}
+            .desk {display: none;}
+            .logo {width: 120px; height: auto; left: calc(50% - 60px;)}
+        }
+        
+        
+    @media screen and (min-width:768px) and (max-width:959px){
+        /* 태블릿 pc */
+       
+        .product .col { width:50%; }
+        .pageTit { font-size:2em; }
+        .ft { height:120px; }
+        #fnb li a { font-size:1.2em;  
+            line-height:2.4;  }
+    }
+    @media screen and (min-width:960px) {
+        /* 데스크탑 pc */
+        .mo { display:none; }
+        .desk { display:block;}
+        .product .col { width:33.3333%; }
+        .pageTit { font-size:2.4em; }
+        .ft { height:150px; }
+        #fnb li a { font-size:1.5em;  
+            line-height:2.8;  }
+    }
+        
+    @media screen and 
+    </style>
+    
+    <script>
+    $(document).ready(function(){
+        var wd = parseInt($(window).width());
+        $("#btnGroup label").click(function () {
+            $("#btnGroup label").removeClass("on");
+            $(this).addClass("on");
+            var curImg = parseInt($(this).attr("for"));
+            $(".vs").animate({"margin-left":(curImg-1)*(wd*-1)}, 1000);
+        });
+    })
+    </script>
+</head>
+<body>
+<input type="checkbox" id="menu_call" class="ck">
+<header class="mo hd">
+    <button class="home">
+       <a href="index.html">
+        <i class="fas fa-home fs30"></i>
+        </a>
+    </button>
+    <a href="" class="logo">
+        <img src="./images/logo.JPG" alt="logo">
+    </a>
+    <label for="menu_call" class="lst">
+        <i class="fas fa-bars fs30"></i>
+        <i class="fas fa-times fs30"></i>
+    </label>
+</header>
+<nav id="menu" class="desk">
+    <a href="" class="logo">
+        <img src="./images/logo.JPG" alt="logo">
+    </a>
+    <ul class="menu">
+        <li><a href="">시험/검사</a></li>
+        <li><a href="">인증/심사</a></li>
+        <li><a href="">KTC소개</a></li>
+        <li><a href="">연구개발/교육</a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <aside class="mo gnb">
+        <nav id="gnb">
+            <ul class="menu">
+                <li><a href="">시험/검사</a></li>
+                <li><a href="">인증/심사</a></li>
+                <li><a href="">KTC소개</a></li>
+                <li><a href="">연구개발/교육</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="content">
+        
+        <div class="btnFrame" id="btnGroup">
+                <ul>
+                    <li><label for="1" class="on">1</label></li>
+                    <li><label for="2">2</label></li>
+                    <li><label for="3">3</label></li>
+
+                </ul>
+            </div>   
+           
+           
+        <div class="imgsld"> 
+            
+            <figure class="vs">
+               <ul class="conBox" id="images">
+                    <li>
+                        <a href="">
+                            <img src="./images/imgslid_2.jpg" alt="sld1">
+                        </a>
+                    </li>
+                    
+                </ul>
+                   
+            
+       
+            </figure>
+        </div>
+       <h2 class="pageTit">KTC WORK</h2>
+        
+        <ul class="product">
+            <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_chart.jpg" alt="work1">
+                    <h3 class="proTit">KTC 성적서열람</h3>
+                    </a>
+            </li>
+             <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_electronic.jpg" alt="work2">
+                    <h3 class="proTit">전기용품 안전인증조회</h3>
+                    </a>
+            </li>
+             <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_gcc.jpg" alt="work3">
+                    <h3 class="proTit">GCC 인증현황조회</h3>
+                    </a>
+            </li>
+             <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_ks.jpg" alt="work4">
+                    <h3 class="proTit">KS 인증현황 조회</h3>
+                    </a>
+            </li>
+            <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_prove.jpg" alt="work5">
+                    <h3 class="proTit">KTC 성적서 발행진위여부</h3>
+                    </a>
+            </li>
+             <li class="col">
+                    <a href="">
+                    <img src="./images/ktc_search.jpg" alt="work6">
+                    <h3 class="proTit">KTC 검사 진행조회</h3>
+                    </a>
+            </li>           
+        </ul>
+    <h2 class="pageTit">KTC SERVICE</h2>    
+        <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service1.jpg" alt="service1">
+                    <h3 class="proTit">요양원</h3>
+                </a>
+            </li>           
+        </ul>
+        <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service2.jpg" alt="service2">
+                    <h3 class="proTit">EMC</h3>
+                </a>
+            </li>           
+        </ul>
+        <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service4.jpg" alt="service4">
+                    <h3 class="proTit">의료기기</h3>
+                </a>
+            </li>           
+        </ul>
+         <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service3.jpg" alt="service3">
+                   
+                </a>
+            </li>           
+        </ul>
+         <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service5.jpg" alt="service5">
+                    
+                </a>
+            </li>           
+        </ul>
+         <ul class="product">
+            <li class="col">
+                <a href="">
+                    <img src="./images/ktc_service6.jpg" alt="service6">
+                    
+                </a>
+            </li>           
+        </ul>
+    </section>
+    
+   
+</div>
+<footer class="ft">
+    <nav id="fnb">
+        <ul class="fmenu">
+            <li><a href="">신청서작성</a></li>
+            <li><a href="">문의연락처</a></li>
+            <li><a href="">신청서양식</a></li>
+            <li><a href="">사이트맵</a></li>
+        </ul>
+    </nav>
+<p class="copyright">
+Copyright©2018 한국기계전기전자시험연구원. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
