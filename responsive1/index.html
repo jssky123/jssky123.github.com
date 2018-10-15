@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- 인터넷익스플로러 최신 버전으로 사이트 열기 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 자동 새로고침 주기 -->
+    <meta http-equiv="refresh" content="180">
+    <!-- 사이트 정보 -->
+    <meta name="application-name" content="panasonic">
+    <meta name="author" content="lee hyun">
+    <meta name="description" content="electronics">
+    <meta name="keywords" content="카메라 가전제품 랜즈 파나소닉">
+    
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/X-icon"> 
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64 72x72 96x96 129x129" href="./images/favicon/ico" type="image/X-icon">
+    
+    <link rel="apple-touch-icon-precomposed" href="./images/favicon.JPG">
+    
+    <meta name="msapplication-TitleColor" content="#FFFFFF">
+    
+    <meta name="msapplication-TitleImage" content="./images/favicon.JPG">
+    
+    <title>::: panasonic :::</title>
+    
+    <link rel="shortcut icon" href="./images/favicon/64x64.ico" type="image/vnd.microsoft.icon"> 
+    <!-- Still works in IE6+ series3 -->
+    <link rel="shortcut icon" href="./images/favicon/64x64.ico" type="image/x-icon"> 
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    
+    
+    <style>
+    * { margin:0; padding:0; }    
+    button, a, label, input { outline:0; border:0; text-decoration:none; background:transparent; }
+    ul { list-style:none; }
+    body, html { width:100%; height:100%;  font-family:'Noto Sans KR', sans-serif; }    
+       
+    .mo { display:block; }
+    
+    .mo.hd { width:100%; height:60px; overflow:hidden; 
+        position:relative; text-align:center; padding-top:10px;
+        box-sizing:border-box; border-bottom:1px solid #666; 
+        background:#333; } 
+    
+    .fs30 { font-size:30px; color:#fff; }    
+    
+    .mo.hd .home { position:absolute; top:15px; left:15px; 
+        z-index:20;}
+    .mo.hd .lst { position:absolute; top:15px; right:15px; 
+        z-index:20; }
+    .wrap { clear:both; width:calc(100% + 200px); height:100%; }
+    
+    .content { float:left; border-top:1px solid #111; 
+        width:calc(100% - 200px); }
+    
+    .vs { display:block; 
+         width: 100%;     
+         clear: both;
+         overflow: hidden; 
+        
+       }
+    
+    .vs img { clear:both; display:block; width:100%; }   
+    
+    .conBox {display: block; margin-left: 90px; margin-top: 20px;}
+    
+    .conBox li {float: left;}
+        
+    
+    #btnGroup { width:100%; clear:both; }
+    
+    #btnGroup li { float:left; padding: 10px;  }
+
+    #btnGroup label { color:#333; 
+            display:block; 
+            background-color:#fff; 
+            width:40px; 
+            text-align:center; 
+            line-height:40px; }
+    
+    #btnGroup label.on { color:#fff; background-color:#333; }        
+         
+    .pageTit { line-height:2.4; text-align:center; }
+    .product { width:100%; }
+    .product .col { float:left; width:100%; position:relative; } 
+    .product .col a { display:block; text-align:center; }
+     
+    .proTit { line-height:1.8; color:#333; }    
+    .proCom { padding:15px; padding-bottom:40px; }
+    .proCom span { display:block; font-size:14px; }
+   
+    .num { color:#666; }
+    
+    .com { color:#333; padding:20px; }
+        
+   
+        
+    .ft { clear:both; height:85px; width:100%; background:#333; }
+    #fnb { width:90%; margin:10px auto; }
+    #fnb li { float:left; width:25%; }
+    #fnb li a { display:block; font-size:0.8em; color:#fff; 
+        line-height:1.8; text-align:center; }
+    .copyright { text-align:center; clear:both; font-size:0.8em; 
+        color:#fff; border-top:1px solid #555; line-height:50px; }
+    .ck { display:none; }
+    .gnb { width:200px; height:100%; background:rgba(200, 200, 200, 0.8); margin-left:-200px; transition:0.6s; float:left; }
+    .gnb li { line-height:36px; border-bottom:1px solid #666; 
+        background:#333;  border-top:1px solid #000; }
+    .gnb a { display:block; text-indent:20px; line-height:36px; 
+        color:#fff;      }
+    #menu_call:checked ~ .wrap .gnb { margin-left:0; }
+    #menu_call:not(:checked) ~ .hd .lst .fa-bars { display:block; }
+    #menu_call:not(:checked) ~ .hd .lst .fa-times { display:none; }
+    #menu_call:checked ~ .hd .lst .fa-bars { display:none; }
+    #menu_call:checked ~ .hd .lst .fa-times { display:block; }
+    .desk { display:none; }
+    #menu { clear:both; width:100%; text-align:center; }
+    #menu .menu { clear:both; }
+    #menu li { float:left; width:25%; line-height:40px; }
+    #menu li a { display:block; background:#333; color:#fff;
+        font-size:0.9em; text-align:center; line-height:40px; }  
+    
+    @media screen and (min-width:768px) and (max-width:959px){
+        /* 태블릿 pc */
+        .product .col { width:50%; }
+        .pageTit { font-size:2em; }
+        .ft { height:120px; }
+        #fnb li a { font-size:1.2em;  
+            line-height:2.4;  }
+    }
+    @media screen and (min-width:960px) {
+        /* 데스크탑 pc */
+        .mo { display:none; }
+        .desk { display:block;}
+        .product .col { width:33.3333%; }
+        .pageTit { font-size:2.4em; }
+        .ft { height:150px; }
+        #fnb li a { font-size:1.5em;  
+            line-height:2.8;  }
+    }
+    </style>
+    
+    <script>
+    $(document).ready(function(){
+        var wd = parseInt($(window).width());
+        $("#btnGroup label").click(function () {
+            $("#btnGroup label").removeClass("on");
+            $(this).addClass("on");
+            var curImg = parseInt($(this).attr("for"));
+            $(".vs").animate({"margin-left":(curImg-1)*(wd*-1)}, 1000);
+        });
+    })
+    </script>
+</head>
+<body>
+<input type="checkbox" id="menu_call" class="ck">
+<header class="mo hd">
+    <button class="home">
+        <i class="fas fa-home fs30"></i>
+    </button>
+    <a href="" class="logo">
+        <img src="./images/favicon.JPG" alt="logo">
+    </a>
+    <label for="menu_call" class="lst">
+        <i class="fas fa-bars fs30"></i>
+        <i class="fas fa-times fs30"></i>
+    </label>
+</header>
+<nav id="menu" class="desk">
+    <a href="" class="logo">
+        <img src="./images/favicon.JPG" alt="logo">
+    </a>
+    <ul class="menu">
+        <li><a href="">디지털 AV</a></li>
+        <li><a href="">생활가전</a></li>
+        <li><a href="">뷰티/헬스</a></li>
+        <li><a href="">이벤트</a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <aside class="mo gnb">
+        <nav id="gnb">
+            <ul class="menu">
+                <li><a href="">디지털 AV</a></li>
+                <li><a href="">생활가전</a></li>
+                <li><a href="">뷰티/헬스</a></li>
+                <li><a href="">이벤트</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="content">
+        
+        <div class="btnFrame" id="btnGroup">
+                <ul>
+                    <li><label for="1" class="on">1</label></li>
+                    <li><label for="2">2</label></li>
+                    <li><label for="3">3</label></li>
+
+                </ul>
+            </div>   
+           
+           
+   
+            
+        <figure class="vs">
+               <ul class="conBox" id="images">
+                    <li>
+                        <a href=""><img src="./images/event1.jpg" alt="event1"></a>
+                    </li>
+              
+                    
+                </ul>
+       
+        </figure>
+        
+       <h2 class="pageTit">제품 목록</h2>
+        
+        <ul class="product">
+            <li class="col"><a href="">
+                    <img src="./images/dsc_01.jpg" alt="dsc1">
+                    <h3 class="proTit">DC-GH5S</h3>
+                    <p class="proCom">
+                        <span class="price">2,820,000</span>
+                        <span class="com">파나소닉은 최고의 영상 장비를 구현하기 위해서 LUMIX역사상 가장 높은 화질을 실현하는 미러리스 카메라를 완성했습니다.</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/dsc_02.jpg" alt="dsc2">
+                    <h3 class="proTit">DC-GX9GD-Silver</h3>
+                    <p class="proCom">
+                        <span class="price">859,000</span>
+                        <span class="com">GX9은 2,030만 화소의 고화질 이미지와 4K 동영상을 지원하는 콤팩트 미러리스 카메라입니다.</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/dsc_03.jpg" alt="dsc3">
+                    <h3 class="proTit">DC-GX9GD-Black</h3>
+                    <p class="proCom">
+                        <span class="price">859,000</span>
+                        <span class="com">GX9은 2,030만 화소의 고화질 이미지와 4K 동영상을 지원하는 콤팩트 미러리스 카메라입니다.</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/camcorder_01.jpg" alt="cam1">
+                    <h3 class="proTit">HX-A500GD</h3>
+                    <p class="proCom">
+                        <span class="price">499,000</span>
+                        <span class="com">뛰어난 고감도 성능의 이면조사형 센서 고속 크리스탈 엔진 PRO+탑재 1080/60P의 초고화질 동영상</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/camcoredr_02.jpg" alt="cam2">
+                    <h3 class="proTit">HX-A500GD</h3>
+                    <p class="proCom">
+                        <span class="price">499,000</span>
+                        <span class="com">뛰어난 고감도 성능의 이면조사형 센서 고속 크리스탈 엔진 PRO+탑재 1080/60P의 초고화질 동영상</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/darimi_01.jpg" alt="darimi1">
+                    <h3 class="proTit">NI-P250</h3>
+                    <p class="proCom">
+                        <span class="price">34,800</span>
+                        <span class="com">파나소닉의 다라미 모든 모델에는 칼슘으로 스팀홀이 막히는 것을 막기 위하여 안티-칼슘 캡슐이 들어있습니다.</span>
+                    </p>
+                </a></li>    
+            <li class="col"><a href="">
+                    <img src="./images/circulator_1.jpg" alt="circulator1">
+                    <h3 class="proTit">F-25WFAAANNVK(파나소닉 스마트볼)</h3>
+                    <p class="proCom">
+                        <span class="price">299,000</span>
+                        <span class="com">파나소닉 스마트볼을 통해 쾌적한 자연의 바람을 실내에서 경험해보세요</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/circulator_2.jpg" alt="circulator2">
+                    <h3 class="proTit">F-25WFAAARNVK(파나소닉 스마트볼)</h3>
+                    <p class="proCom">
+                        <span class="price">299,000</span>
+                        <span class="com">파나소닉 스마트볼을 통해 쾌적한 자연의 바람을 실내에서 경험해보세요</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/lens_01.jpg" alt="lens1">
+                    <h3 class="proTit">H-ES50200</h3>
+                    <p class="proCom">
+                        <span class="price">1,890,000</span>
+                        <span class="com">50-200mm 망원렌즈는 최상의 사진과 이미지 품질을 갖추고 있으며 일몰과 같은 저조도 환경에도 놀라운 안정성을 선보입니다.</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/lens_02.jpg" alt="lens2">
+                    <h3 class="proTit">H-E08018E</h3>
+                    <p class="proCom">
+                        <span class="price">1,299,000</span>
+                        <span class="com">50-200mm 망원렌즈는 최상의 사진과 이미지 품질을 갖추고 있으며 일몰과 같은 저조도 환경에도 놀라운 안정성을 선보입니다.</span>
+                    </p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="./images/lens_03.jpg" alt="lens3">
+                    <h3 class="proTit">H-FSA100300</h3>
+                    <p class="proCom">
+                        <span class="price">719,000</span>
+                        <span class="com">50-200mm 망원렌즈는 최상의 사진과 이미지 품질을 갖추고 있으며 일몰과 같은 저조도 환경에도 놀라운 안정성을 선보입니다.</span>
+                    </p>
+                </a></li>
+                
+             
+                
+        </ul>
+        
+    </section>
+</div>
+<footer class="ft">
+    <nav id="fnb">
+        <ul class="fmenu">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">사이트맵</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">고객센터</a></li>
+        </ul>
+    </nav>
+<p class="copyright">
+COPYRIGHT 2016 Panasonic Korea Ltd. All Rights Reserved</p>
+</footer>
+</body>
+</html>
