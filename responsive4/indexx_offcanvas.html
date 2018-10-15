@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Copmatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {margin: 0;}
+        .container { margin: 0; padding: 0; width: 100%;}
+        .container section {box-sizing: border-box; min-height: 150px; min-width: 150px;}
+        
+        .c1 {color:#ddd; background-color: #aca;}
+        .c2 {color:#ddd; background-color: #cac;}
+        .c3 {color:#333; background-color: #760034;}
+        .c4 {color:#333; background-color: #340076;}
+        .c5 {color:#333; background-color: #763400;}
+        
+        /*
+        
+        넘치는 영역 숨김형 - off canvas
+        
+        오프 캔버스 패턴은 콘탠츠를 수직으로 쌓지 않고 사용 빈도가 낮은 콘탠츠를 화면 밖에 배치하고, 화면 크기가 충분히 커지면 표시하고, 작은 화면에서는 클릭했을 경우에만 보여집니다.
+        
+        */
+        
+        
+        
+        body {overflow-x: hidden;}
+        .container {display: block;}
+        .c1, .c3 {position: absolute; width: 250px; height: 100%; -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.4s ease-out;
+        transition: transform 0.4s ease-out;
+        z-index: 1;}
+        
+        .c1 {-webkit-transform: translate(-250px,0);
+            transform: translate(-250px,0);}
+        
+        .c2 {width: 100%; position: absolute;}
+        
+        .c3 {left:100%;}
+        
+        .c1.open {-webkit-transform: translate(0,0);
+        transform: translate(0,0);}
+        
+        .c3.open {-webkit-transform: translate(-250px,0);
+        transform: translate(-250pxx,0);}
+        
+        @media (min-width:500px){
+            .container {display: -webkit-flex; display: flex;
+            -webkit-flex-flow: row nowrap;
+            flex-flow: row nowrap;}
+        
+        .c1 {position: relative; -webkit-transition: none 0s ease-out; transition: none 0s ease-out;
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);}
+        
+        .c2 {position: static;}
+        }
+        
+        
+        
+        
+        @media (min-width:800px) {
+            body {overflow-x: auto;}
+            .cs {position: relative; left: auto;
+            -webkit-transition: none 0s ease-out;
+            transition: none 0s ease-out;
+            -webkit-transform: translate(0,0);
+            transform: translate(0,0);}
+            
+        }
+       
+    
+    </style>
+    
+    <title>넘치는 영역 숨김형 - off canvas</title>
+    
+    
+</head>
+<body>
+    <div class="container" role="main">
+      
+      <section class="c1" id="leftDrawer">
+          여기는 왼쪽
+      </section>
+      
+      <section class="c2" id="mainPanel">
+          여기는 메인
+      </section>
+      
+      <section class="c3" id="rightDrawer">
+          여기는 오른쪽 
+      </section>
+       
+    </div>
+</body>
+</html>
