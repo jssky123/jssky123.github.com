@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lee's portfilio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/X-icon">
+
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64 72x72 96x96 129x129" href="./images/ico/64x64.ico" type="image/X-icon">
+
+    <link rel="apple-touch-icon-precomposed" href="./images/ico/64x64.ico">
+
+    <meta name="msapplication-TitleColor" content="#FFFFFF">
+
+    <meta name="msapplication-TitleImage" content="./images/ico/64x64.ico">
+
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/vnd.microsoft.icon">
+
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <script src="main10.js"></script>
+    <script src="main11.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <div id="canvas">
+            <nav class="menu">
+                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                <label class="menu-open-button" for="menu-open">
+                    <span class="hamburger hamburger-1"></span>
+                    <span class="hamburger hamburger-2"></span>
+                    <span class="hamburger hamburger-3"></span>
+                </label>
+
+                <a href="#" class="menu-item">Contact</a>
+                <a href="#" class="menu-item">Working</a>
+                <a href="#" class="menu-item">Portfolio</a>
+                <a href="#" class="menu-item">About</a>
+                <a href="#" class="menu-item">Home</a>
+
+            </nav>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="shadowed-goo">
+
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                        <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                        <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                        <feBlend in2="shadow" in="goo" result="goo" />
+                        <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <ul class="about">
+
+            <h1>About Myself</h1>
+
+            <li>
+                <a href="#">
+                    <img src="./images/portrait.jpg" alt="portrait">
+                </a>
+            </li>
+
+            <li>
+                <a href="#"><br><br>제 실력의 미숙함을 보충하기 위하여 <br><br> 오늘보다 내일이 더 기대가 되는 잠재력을 갖춘 인재로 거듭나도록 하겠으며, <br><br> 강점을 최대한 살려서 아무리 어려운 문제에 직면해도 해결될 때 까지 도전할 것입니다. <br><br> 끊임없는 노력과 초심을 잃지 않는 마음가짐으로 회사의 가치와 기대에 부응하는 인재가 되겠습니다.
+                </a>
+            </li>
+        </ul>
+        <div class="flipbox">
+            <div class="flip-3d item1">
+                <figure>
+                    <img src="./images/res1.jpg" alt="panasonic_r">
+                    <figcaption>
+                        <strong>반응형-파나소닉</strong>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item2">
+                <figure>
+                    <img src="./images/mobile6.jpg" alt="panasonic_m">
+                    <figcaption>
+                        <strong>모바일-파나소닉</strong>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item3">
+                <figure>
+                    <img src="./images/desk3.jpg" alt="deco&e_d">
+                    <figcaption>
+                        <strong>데스크탑-데코앤이</strong>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item4">
+                <figure>
+                    <img src="./images/mobile3.jpg" alt="patent_m">
+                    <figcaption>
+                        <strong>모바일-특허청</strong>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item5">
+                <figure>
+                    <img src="./images/res5.jpg" alt="amazon_r">
+                    <figcaption>
+                        <strong>반응형-아마존</strong>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item6">
+                <figure>
+                    <img src="./images/res2.jpg" alt="ktc_r">
+                    <figcaption>
+                        <strong>반응형-KTC</strong>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+        <ul class="progress">
+            <h1>My Skills</h1>
+            <li data-name="MOS Office" data-percent="93%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="9" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="580"></path>
+                </svg>
+            </li>
+
+            <li data-name="HTML/CSS Skill" data-percent="87%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="8" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="547"></path>
+                </svg>
+            </li>
+
+            <li data-name="jQuery/Java Skill" data-percent="80%">
+                <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="8" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="500"></path>
+                </svg>
+            </li>
+
+            <li data-name="PS/AI Skill" data-percent="97%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="9" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="610"></path>
+                </svg> </li>
+            <!--  Item  -->
+            <li data-name="Design Skill" data-percent="58%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="6" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="364"></path>
+                </svg> </li>
+
+        </ul>
+
+        <svg width="0" height="0">
+            <defs>
+                <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#618099" />
+                    <stop offset="100%" stop-color="#8e6677" />
+                </linearGradient>
+                <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+                    <stop stop-color="#8e6677" />
+                    <stop offset="100%" stop-color="#9b5e67" />
+                </linearGradient>
+                <linearGradient id="cl3" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
+                    <stop stop-color="#9b5e67" />
+                    <stop offset="100%" stop-color="#9c787a" />
+                </linearGradient>
+                <linearGradient id="cl4" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
+                    <stop stop-color="#9c787a" />
+                    <stop offset="100%" stop-color="#817a94" />
+                </linearGradient>
+                <linearGradient id="cl5" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
+                    <stop stop-color="#817a94" />
+                    <stop offset="100%" stop-color="#498a98" />
+                </linearGradient>
+                <linearGradient id="cl6" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                    <stop stop-color="#498a98" />
+                    <stop offset="100%" stop-color="#618099" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+
+        <div class="container">
+
+            <section class="pageNationBox">
+                <div class="info">
+
+                </div>
+
+                <div class="imgBox">
+
+                    <article class="page" page-value="1">
+
+                        <a href="../design1/" class="col3">
+                            <img src="./images/desk1.jpg" alt="desk1">
+                        </a>
+
+                        <a href="../sub4.html" class="col3">
+                            <img src="./images/ds3.jpg" alt="ds3">
+                        </a>
+
+                        <a href="../design4/" class="col3">
+                            <img src="./images/desk3.jpg" alt="desk3">
+                        </a>
+
+                        <a href="../design3/" class="col3">
+                            <img src="./images/desk4.jpg" alt="desk4">
+                        </a>
+
+                        <a href="../sub4.html" class="col3">
+                            <img src="./images/ds1.jpg" alt="ds1">
+                        </a>
+                    </article>
+                    <article class="page" page-value="2">
+
+                        <a href="../mobile2/" class="col3">
+                            <img src="./images/mobile1.jpg" alt="mobile1">
+                        </a>
+
+                        <a href="../mobile3/" class="col3">
+                            <img src="./images/mobile2.jpg" alt="mobile2">
+                        </a>
+
+                        <a href="../mobile4/" class="col3">
+                            <img src="./images/mobile3.jpg" alt="mobile3">
+                        </a>
+
+                        <a href="../mobile5/" class="col3">
+                            <img src="./images/mobile4.jpg" alt="mobile4">
+                        </a>
+
+                        <a href="../mobile6/" class="col3">
+                            <img src="./images/mobile5.jpg" alt="mobile5">
+                        </a>
+
+                        <a href="../mobile8/" class="col3">
+                            <img src="./images/mobile6.jpg" alt="mobile6">
+                        </a>
+
+                    </article>
+                    <article class="page" page-value="3">
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res1.jpg" alt="res1">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res2.jpg" alt="res2">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res3.jpg" alt="res3">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res4.jpg" alt="res5">
+                        </a>
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res5.jpg" alt="res5">
+                        </a>
+                    </article>
+
+
+                </div>
+
+            </section>
+            <div class="more_wrap" id="pageNation">
+                <div class="more" page-value="1" id="pageSkipHome">&laquo;</div>
+                <div class="more item on" page-value="1" id="pageSkip1">1</div>
+                <div class="more item" page-value="2" id="pageSkip2">2</div>
+                <div class="more item" page-value="3" id="pageSkip3">3</div>
+
+                <div class="more" page-value="6" id="pageSkipLast">&raquo;</div>
+            </div>
+        </div>
+
+
+
+        <div class="container2">
+            <form id="contact" action="" method="post">
+                <h1 class="ctitle">Contact Me</h1>
+
+                <fieldset>
+                    <input placeholder="Name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Phone Number" type="tel" tabindex="3" required>
+                </fieldset>
+
+                <fieldset>
+                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
