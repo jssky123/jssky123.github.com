@@ -36,13 +36,14 @@ html {
     width: 100vw;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 100px;
 
 }
 
 .about a {
     color: #333;
     text-align: center;
-    font-size: 2em;
+   font-size: 40;
 }
 
 
@@ -79,7 +80,9 @@ html {
     overflow: hidden;
 }
 
+.flipbox h1 {text-align: center;}
 
+.flipbox a {color:#333;}
 
 div.flip-3d {
     perspective: 1440px;
@@ -136,6 +139,10 @@ div.flip-3d figure:after {
     background-image: url(images/bg.jpg);
     min-height: 550px;
 }
+
+.container h1 {text-align: center;}
+
+.container a {color:#333;}
 
 .pageNationBox {
     padding-bottom: 10px;
