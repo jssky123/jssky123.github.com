@@ -15,19 +15,23 @@ stroke-dashoffset:0
 }
 }
 
-/* Container */
+
 
 .progress {
-    background-image: url(images/bg9.jpg);
+    
   position: relative;
   display: inline-block;
   padding: 0;
   text-align: center;
     margin: 0px auto;
-    padding: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  width: 100vw;
+    text-align: center;
+    
 }
 
-/* Item */
+
 
 .progress>li {
   display: inline-block;

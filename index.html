@@ -1,393 +1,423 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>lee's portfilio</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/X-icon"> 
-    
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/X-icon">
+
     <link rel="icon" sizes="16x16 32x32 48x48 64x64 72x72 96x96 129x129" href="./images/ico/64x64.ico" type="image/X-icon">
-    
-    <link rel="apple-touch-icon-precomposed" href="./images/ico/64x64.ico">
-    
-    <meta name="msapplication-TitleColor" content="#FFFFFF">
-    
-    <meta name="msapplication-TitleImage" content="./images/ico/64x64.ico">
-      
-    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/vnd.microsoft.icon"> 
-    
-    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/x-icon"> 
-    
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-     
-     <link rel="stylesheet" href="common.css">
-     <link rel="stylesheet" href="menu.css">
-     <link rel="stylesheet" href="progress.css">
-     <link rel="stylesheet" href="contact.css">
-  
-    
-    <script>
-        $(document).ready(function(){
-   $("#gnb li, #gnb li a").hover(function(){
-       $(this).find(".sub").stop().slideDown(700);
-   });
-   $("#gnb li").mouseleave(function(){
-       $(this).find(".sub").stop().slideUp(100); 
-   }); 
-});
-</script>
-    <script>
-    $(document).ready(function(){
-		var pageCnt = parseInt($(".page").length); 
-		var pageWd = parseInt($(".page").width());
-		var pageMax = pageCnt * pageWd * -1;
-		var c_page;
-		$(".more").on("click", function(){
-			c_page = parseInt($(this).attr("page-value"));
-			var ani = pageWd * (c_page - 1) * -1;
-			if(ani > pageMax) {
-				$(".imgBox").animate({"margin-left" : ani+"px"}, 900);
-			}
-            $(".more.item").removeClass("on");
-            $(".more.item").eq(c_page-1).addClass("on");
-		});
-	});
-    </script>
-    <script>
-    /**
- * StyleFix 1.0.3 & PrefixFree 1.0.7
- * @author Lea Verou
- * MIT license
- */
-(function(){function m(a,b){return[].slice.call((b||document).querySelectorAll(a))}if(window.addEventListener){var e=window.StyleFix={link:function(a){var b=a.href||a.getAttribute("data-href");try{if(!b||"stylesheet"!==a.rel||a.hasAttribute("data-noprefix"))return}catch(p){return}var d=b.replace(/[^\/]+$/,""),f=(/^[a-z]{3,10}:/.exec(d)||[""])[0],h=(/^[a-z]{3,10}:\/\/[^\/]+/.exec(d)||[""])[0],k=/^([^?]*)\??/.exec(b)[1],g=a.parentNode,c=new XMLHttpRequest,l;c.onreadystatechange=function(){4===c.readyState&&
-l()};l=function(){var b=c.responseText;if(b&&a.parentNode&&(!c.status||400>c.status||600<c.status)){if((b=e.fix(b,!0,a))&&d)var b=b.replace(/url\(\s*?((?:"|')?)(.+?)\1\s*?\)/gi,function(b,a,c){return/^([a-z]{3,10}:|#)/i.test(c)?b:/^\/\//.test(c)?'url("'+f+c+'")':/^\//.test(c)?'url("'+h+c+'")':/^\?/.test(c)?'url("'+k+c+'")':'url("'+d+c+'")'}),n=d.replace(/([\\\^\$*+[\]?{}.=!:(|)])/g,"\\$1"),b=b.replace(RegExp("\\b(behavior:\\s*?url\\('?\"?)"+n,"gi"),"$1");n=document.createElement("style");n.textContent=
-"/*# sourceURL="+a.getAttribute("href")+" */\n/*@ sourceURL="+a.getAttribute("href")+" */\n"+b;n.media=a.media;n.disabled=a.disabled;n.setAttribute("data-href",a.getAttribute("href"));a.id&&(n.id=a.id);g.insertBefore(n,a);g.removeChild(a);n.media=a.media}};try{c.open("GET",b),c.send(null)}catch(p){"undefined"!=typeof XDomainRequest&&(c=new XDomainRequest,c.onerror=c.onprogress=function(){},c.onload=l,c.open("GET",b),c.send(null))}a.setAttribute("data-inprogress","")},styleElement:function(a){if(!a.hasAttribute("data-noprefix")){var b=
-a.disabled;a.textContent=e.fix(a.textContent,!0,a);a.disabled=b}},styleAttribute:function(a){var b=a.getAttribute("style"),b=e.fix(b,!1,a);a.setAttribute("style",b)},process:function(){m('link[rel="stylesheet"]:not([data-inprogress])').forEach(StyleFix.link);m("style").forEach(StyleFix.styleElement);m("[style]").forEach(StyleFix.styleAttribute)},register:function(a,b){(e.fixers=e.fixers||[]).splice(void 0===b?e.fixers.length:b,0,a)},fix:function(a,b,d){if(e.fixers)for(var f=0;f<e.fixers.length;f++)a=
-e.fixers[f](a,b,d)||a;return a},camelCase:function(a){return a.replace(/-([a-z])/g,function(b,a){return a.toUpperCase()}).replace("-","")},deCamelCase:function(a){return a.replace(/[A-Z]/g,function(b){return"-"+b.toLowerCase()})}};(function(){setTimeout(function(){m('link[rel="stylesheet"]').forEach(StyleFix.link)},10);document.addEventListener("DOMContentLoaded",StyleFix.process,!1)})()}})();
-(function(m){function e(b,d,f,h,k){b=a[b];b.length&&(b=RegExp(d+"("+b.join("|")+")"+f,"gi"),k=k.replace(b,h));return k}if(window.StyleFix&&window.getComputedStyle){var a=window.PrefixFree={prefixCSS:function(b,d,f){var h=a.prefix;-1<a.functions.indexOf("linear-gradient")&&(b=b.replace(/(\s|:|,)(repeating-)?linear-gradient\(\s*(-?\d*\.?\d*)deg/ig,function(b,a,d,f){return a+(d||"")+"linear-gradient("+(90-f)+"deg"}));b=e("functions","(\\s|:|,)","\\s*\\(","$1"+h+"$2(",b);b=e("keywords","(\\s|:)","(\\s|;|\\}|$)",
-"$1"+h+"$2$3",b);b=e("properties","(^|\\{|\\s|;)","\\s*:","$1"+h+"$2:",b);if(a.properties.length){var k=RegExp("\\b("+a.properties.join("|")+")(?!:)","gi");b=e("valueProperties","\\b",":(.+?);",function(a){return a.replace(k,h+"$1")},b)}d&&(b=e("selectors","","\\b",a.prefixSelector,b),b=e("atrules","@","\\b","@"+h+"$1",b));b=b.replace(RegExp("-"+h,"g"),"-");return b=b.replace(/-\*-(?=[a-z]+)/gi,a.prefix)},property:function(b){return(0<=a.properties.indexOf(b)?a.prefix:"")+b},value:function(b,d){b=
-e("functions","(^|\\s|,)","\\s*\\(","$1"+a.prefix+"$2(",b);b=e("keywords","(^|\\s)","(\\s|$)","$1"+a.prefix+"$2$3",b);0<=a.valueProperties.indexOf(d)&&(b=e("properties","(^|\\s|,)","($|\\s|,)","$1"+a.prefix+"$2$3",b));return b},prefixSelector:function(b){return a.selectorMap[b]||b},prefixProperty:function(b,d){var f=a.prefix+b;return d?StyleFix.camelCase(f):f}};(function(){var b={},d=[],f=getComputedStyle(document.documentElement,null),h=document.createElement("div").style,k=function(a){if("-"===
-a.charAt(0)){d.push(a);a=a.split("-");var c=a[1];for(b[c]=++b[c]||1;3<a.length;)a.pop(),c=a.join("-"),StyleFix.camelCase(c)in h&&-1===d.indexOf(c)&&d.push(c)}};if(f&&0<f.length)for(var g=0;g<f.length;g++)k(f[g]);else for(var c in f)k(StyleFix.deCamelCase(c));var g=0,e,p;for(p in b)f=b[p],g<f&&(e=p,g=f);a.prefix="-"+e+"-";a.Prefix=StyleFix.camelCase(a.prefix);a.properties=[];for(g=0;g<d.length;g++)c=d[g],0===c.indexOf(a.prefix)&&(e=c.slice(a.prefix.length),StyleFix.camelCase(e)in h||a.properties.push(e));
-!("Ms"!=a.Prefix||"transform"in h||"MsTransform"in h)&&"msTransform"in h&&a.properties.push("transform","transform-origin");a.properties.sort()})();(function(){function b(a,b){e[b]="";e[b]=a;return!!e[b]}var d={"linear-gradient":{property:"backgroundImage",params:"red, teal"},calc:{property:"width",params:"1px + 5%"},element:{property:"backgroundImage",params:"#foo"},"cross-fade":{property:"backgroundImage",params:"url(a.png), url(b.png), 50%"},"image-set":{property:"backgroundImage",params:"url(a.png) 1x, url(b.png) 2x"}};
-d["repeating-linear-gradient"]=d["repeating-radial-gradient"]=d["radial-gradient"]=d["linear-gradient"];var f={initial:"color",grab:"cursor",grabbing:"cursor","zoom-in":"cursor","zoom-out":"cursor",box:"display",flexbox:"display","inline-flexbox":"display",flex:"display","inline-flex":"display",grid:"display","inline-grid":"display","max-content":"width","min-content":"width","fit-content":"width","fill-available":"width","contain-floats":"width"};a.functions=[];a.keywords=[];var e=document.createElement("div").style,
-k;for(k in d){var g=d[k],c=g.property,g=k+"("+g.params+")";!b(g,c)&&b(a.prefix+g,c)&&a.functions.push(k)}for(var l in f)c=f[l],!b(l,c)&&b(a.prefix+l,c)&&a.keywords.push(l)})();(function(){function b(a){h.textContent=a+"{}";return!!h.sheet.cssRules.length}var d={":any-link":null,"::backdrop":null,":fullscreen":null,":full-screen":":fullscreen","::placeholder":null,":placeholder":"::placeholder","::input-placeholder":"::placeholder",":input-placeholder":"::placeholder",":read-only":null,":read-write":null,
-"::selection":null},e={keyframes:"name",viewport:null,document:'regexp(".")'};a.selectors=[];a.selectorMap={};a.atrules=[];var h=m.appendChild(document.createElement("style")),k;for(k in d){var g=d[k]||k,c=k.replace(/::?/,function(b){return b+a.prefix});!b(g)&&b(c)&&(a.selectors.push(g),a.selectorMap[g]=c)}for(var l in e)d=l+" "+(e[l]||""),!b("@"+d)&&b("@"+a.prefix+d)&&a.atrules.push(l);m.removeChild(h)})();a.valueProperties=["transition","transition-property","will-change"];m.className+=" "+a.prefix;
-StyleFix.register(a.prefixCSS)}})(document.documentElement);
 
-    
-    </script>
+    <link rel="apple-touch-icon-precomposed" href="./images/ico/64x64.ico">
+
+    <meta name="msapplication-TitleColor" content="#FFFFFF">
+
+    <meta name="msapplication-TitleImage" content="./images/ico/64x64.ico">
+
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/vnd.microsoft.icon">
+
+    <link rel="shortcut icon" href="./images/ico/64x64.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+
+    <script src="main10.js"></script>
+    <script src="main11.js"></script>
+
+
 </head>
 
 <body>
-   
-<div class="wrap">
-   
- <div id="canvas">
-        <nav class="menu">
-          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-          <label class="menu-open-button" for="menu-open">
-            <span class="hamburger hamburger-1"></span>
-            <span class="hamburger hamburger-2"></span>
-            <span class="hamburger hamburger-3"></span>
-          </label>
 
-          <a href="#" class="menu-item"> Contact</a>
-          <a href="#" class="menu-item"> Working</a>
-          <a href="#" class="menu-item">  Portfolio</a>
-          <a href="#" class="menu-item"> About</a>
-          <a href="#" class="menu-item"> Home</a>
+    <div class="wrap">
 
-        </nav>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <div id="canvas">
+            <nav class="menu">
+                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                <label class="menu-open-button" for="menu-open">
+                    <span class="hamburger hamburger-1"></span>
+                    <span class="hamburger hamburger-2"></span>
+                    <span class="hamburger hamburger-3"></span>
+                </label>
+
+                <a href="#contact" class="menu-item">Contact</a>
+                <a href="#working" class="menu-item">Working</a>
+                <a href="#portfolio" class="menu-item">Portfolio</a>
+                <a href="#about" class="menu-item">About</a>
+                <a href="#" class="menu-item">Home</a>
+
+            </nav>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="shadowed-goo">
+
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                        <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                        <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                        <feBlend in2="shadow" in="goo" result="goo" />
+                        <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <ul class="about">
+
+            <a href="#about" name="about">
+                <h1>About Myself</h1>
+            </a>
+
+            <li>
+                <a href="#">
+                    <img src="" alt="portrait">
+                </a>
+            </li>
+
+            <li>
+                <a href="#"><br><br>제 실력의 미숙함을 보충하기 위하여 <br><br> 오늘보다 내일이 더 기대가 되는 잠재력을 갖춘 인재로 거듭나도록 하겠으며, <br><br> 강점을 최대한 살려서 아무리 어려운 문제에 직면해도 해결될 때 까지 도전할 것입니다. <br><br> 끊임없는 노력과 초심을 잃지 않는 마음가짐으로 회사의 가치와 기대에 부응하는 인재가 되겠습니다.
+                </a>
+            </li>
+        </ul>
+        <div class="flipbox">
+            <a href="#portfolio" name="portfolio">
+                <h1>Portfolio</h1>
+            </a>
+            <div class="flip-3d item1">
+                <figure>
+                    <img src="./images/ress1.jpg" alt="panasonic_r">
+                    <figcaption>
+                        <strong>반응형-파나소닉</strong>
+                        <p>카메라 및 전자제품 판매 페이지로써, 메인 화면 자체를 이미지로 꽉 채운 후 그리드를 이용해서 한 눈에 제품군과 해당 제품들을 볼 수 있게 만들었습니다. 또한, 이미지 슬라이더를 사용해서 이벤트에 대한 접근성과 홍보 효과 상승을 기대할 수 있습니다. </p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item2">
+                <figure>
+                    <img src="./images/ress5.jpg" alt="amazon_r">
+                    <figcaption>
+                        <strong>반응형-아마존</strong>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item3">
+                <figure>
+                    <img src="./images/ress2.jpg" alt="ktc_r">
+                    <figcaption>
+                        <strong>반응형-KTC</strong>
+                        <p>이미지 슬라이드로 사이트의 컨셉을 표현했습니다. 또한, 어렵고 생소한 기능들을 제공하는 사이트이기 때문에 사람들의 이해를 돕기 위해 아이콘으로 퀵 메뉴를 표시해, 해당 서비스를 제공하는 페이지로 바로 이동할 수 있습니다. </p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item4">
+                <figure>
+                    <img src="./images/mobile3.jpg" alt="patent_m">
+                    <figcaption>
+                        <strong>모바일-특허청</strong>
+                        <p>관공서 웹 사이트로, 특허에 관한 여러 정보들을 위주로 배치하여 사용자들의 이해를 돕고, 설명과 함께 그리드 형식으로 배치되어 있는 이미지들을 클릭하면 해당 서비스로 바로 이동합니다.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item5">
+                <figure>
+                    <img src="./images/mobile6.jpg" alt="panasonic_m">
+                    <figcaption>
+                        <strong>모바일-파나소닉</strong>
+                        <p>JQuery 모바일을 사용해 제작하였으며, 깔끔한 레이아웃을 목표로 만들었습니다. 
+                        <br>
+                        기기에 맞추어 사이즈가 변형되며, 아이콘들과의 인터렉션을 통해 해당 기능들을 쉽게 이용할 수 있습니다.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flip-3d item6">
+                <figure>
+                    <img src="./images/desk3.jpg" alt="deco&e_d">
+                    <figcaption>
+                        <strong>데스크탑-데코앤이</strong>
+                        <p>자연 친화적 디자인을 테마로 하는 업체로. 4가지 브랜드로 나뉘어 있는데, 메인 페이지는 이미지 슬라이드로 4개의 컨셉을 대략적으로 나타냈으며, 그 밑에는 그리드와 링크로 해당 컨셉의 대표 페이지로 이동하게 배치했습니다.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+        <ul class="progress">
+            <h1>My Skills</h1>
+            <li data-name="MOS Office" data-percent="93%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="9" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="580"></path>
+                </svg>
+            </li>
+
+            <li data-name="HTML/CSS Skill" data-percent="87%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="8" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="547"></path>
+                </svg>
+            </li>
+
+            <li data-name="jQuery/Java Skill" data-percent="80%">
+                <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="8" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="500"></path>
+                </svg>
+            </li>
+
+            <li data-name="PS/AI Skill" data-percent="97%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="9" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="610"></path>
+                </svg> </li>
+            <!--  Item  -->
+            <li data-name="Design Skill" data-percent="58%"> <svg viewBox="-10 -10 220 220">
+                    <g fill="none" stroke-width="6" transform="translate(100,100)">
+                        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
+                        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
+                        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
+                        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)" />
+                        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)" />
+                        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)" />
+                    </g>
+                </svg> <svg viewBox="-10 -10 220 220">
+                    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="364"></path>
+                </svg> </li>
+
+        </ul>
+
+        <svg width="0" height="0">
             <defs>
-              <filter id="shadowed-goo">
-
-                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-                  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-                  <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-                  <feBlend in2="shadow" in="goo" result="goo" />
-                  <feBlend in2="goo" in="SourceGraphic" result="mix" />
-              </filter>
-              <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                  <feBlend in2="goo" in="SourceGraphic" result="mix" />
-              </filter>
+                <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#618099" />
+                    <stop offset="100%" stop-color="#8e6677" />
+                </linearGradient>
+                <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+                    <stop stop-color="#8e6677" />
+                    <stop offset="100%" stop-color="#9b5e67" />
+                </linearGradient>
+                <linearGradient id="cl3" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
+                    <stop stop-color="#9b5e67" />
+                    <stop offset="100%" stop-color="#9c787a" />
+                </linearGradient>
+                <linearGradient id="cl4" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
+                    <stop stop-color="#9c787a" />
+                    <stop offset="100%" stop-color="#817a94" />
+                </linearGradient>
+                <linearGradient id="cl5" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
+                    <stop stop-color="#817a94" />
+                    <stop offset="100%" stop-color="#498a98" />
+                </linearGradient>
+                <linearGradient id="cl6" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                    <stop stop-color="#498a98" />
+                    <stop offset="100%" stop-color="#618099" />
+                </linearGradient>
             </defs>
         </svg>
+
+
+        <div class="container">
+
+
+            <a href="#working" name="working">
+                <h1>Working</h1>
+            </a>
+            <section class="pageNationBox">
+                <div class="info">
+
+                </div>
+
+                <div class="imgBox">
+
+                    <article class="page" page-value="1">
+
+                        <a href="../design1/" class="col3">
+                            <img src="./images/desk1.jpg" alt="desk1">
+                        </a>
+
+                        <a href="../sub4.html" class="col3">
+                            <img src="./images/ds3.jpg" alt="ds3">
+                        </a>
+
+                        <a href="../design4/" class="col3">
+                            <img src="./images/desk3.jpg" alt="desk3">
+                        </a>
+
+                        <a href="../design3/" class="col3">
+                            <img src="./images/desk4.jpg" alt="desk4">
+                        </a>
+
+                        <a href="../sub4.html" class="col3">
+                            <img src="./images/ds1.jpg" alt="ds1">
+                        </a>
+                    </article>
+                    <article class="page" page-value="2">
+
+                        <a href="../mobile2/" class="col3">
+                            <img src="./images/mobile1.jpg" alt="mobile1">
+                        </a>
+
+                        <a href="../mobile3/" class="col3">
+                            <img src="./images/mobile2.jpg" alt="mobile2">
+                        </a>
+
+                        <a href="../mobile4/" class="col3">
+                            <img src="./images/mobile3.jpg" alt="mobile3">
+                        </a>
+
+                        <a href="../mobile5/" class="col3">
+                            <img src="./images/mobile4.jpg" alt="mobile4">
+                        </a>
+
+                        <a href="../mobile6/" class="col3">
+                            <img src="./images/mobile5.jpg" alt="mobile5">
+                        </a>
+
+                        <a href="../mobile8/" class="col3">
+                            <img src="./images/mobile6.jpg" alt="mobile6">
+                        </a>
+
+                    </article>
+                    <article class="page" page-value="3">
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res1.png" alt="res1">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res2.png" alt="res2">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res3.png" alt="res3">
+                        </a>
+
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res4.png" alt="res5">
+                        </a>
+                        <a href="../responsive1/" class="col3">
+                            <img src="./images/res5.png" alt="res5">
+                        </a>
+                    </article>
+
+
+                </div>
+
+            </section>
+            <div class="more_wrap" id="pageNation">
+                <div class="more" page-value="1" id="pageSkipHome">&laquo;</div>
+                <div class="more item on" page-value="1" id="pageSkip1">1</div>
+                <div class="more item" page-value="2" id="pageSkip2">2</div>
+                <div class="more item" page-value="3" id="pageSkip3">3</div>
+
+                <div class="more" page-value="6" id="pageSkipLast">&raquo;</div>
+            </div>
+        </div>
+
+
+
+        <div class="container2">
+            <form id="contact" action="" method="post">
+                <h1 class="ctitle">Contact Me</h1>
+                <a href="#contact"></a>
+                <fieldset>
+                    <input placeholder="Name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Email Address" type="email" tabindex="2" required>
+
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Phone Number" type="tel" tabindex="3" required>
+                </fieldset>
+
+                <fieldset>
+                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+
+
+
+        </div>
+        <footer class="ft">
+            <ul>
+                <li>
+                    <a href="#"><img src="./images/tel.png" alt="tel"></a>
+                    <p>Phone: 010-9996-xxxx</p>
+                </li>
+
+                <li>
+                    <a href="#"><img src="./images/mail.png" alt="mail"></a>
+                    <p>E-mail: jssky5361@gmail.com</p>
+                </li>
+
+                <li>
+                    <a href="#"><img src="./images/contact.png" alt="url"></a>
+                    <p>Url: https://github.com/jssky123</p>
+                    <p>Url: http://jssky123.dothome.co.kr/portfolio1</p>
+                </li>
+
+
+            </ul>
+        </footer>
+        <a href="#" class="Totop">
+    <span>TOP</span>
+</a>    
     </div>
-<ul class="about">
-   <h1>About Myself</h1>
-    <li><a href="#"><br><br>제 실력의 미숙함을 보충하기 위하여 <br><br> 오늘보다 내일이 더 기대가 되는 잠재력을 갖춘 인재로 거듭나도록 하겠으며, <br><br> 강점을 최대한 살려서 아무리 어려운 문제에 직면해도 해결될 때 까지 도전할 것입니다. <br><br> 끊임없는 노력과 초심을 잃지 않는 마음가짐으로 회사의 가치와 기대에 부응하는 인재가 되겠습니다.  </a></li>
-</ul>    
-    
-<div class="flip-3d item1">
-    <figure>
-        <img src="./images/res1.JPG" alt="panasonic_r">
-        <figcaption><strong>반응형-파나소닉</strong></figcaption>
-    </figure>
-</div>
 
-<div class="flip-3d item2">
-    <figure>
-        <img src="./images/mobile6.JPG" alt="panasonic_m">
-        <figcaption><strong>모바일-파나소닉</strong></figcaption>
-    </figure>
-</div>
-<div class="flip-3d item3">
-    <figure>
-        <img src="./images/desk3.JPG" alt="deco&e_d">
-        <figcaption><strong>데스크탑-데코앤이</strong></figcaption>
-    </figure>
-</div>
-<div class="flip-3d item4">
-    <figure>
-        <img src="./images/mobile3.JPG" alt="patent_m">
- <figcaption><strong>모바일-특허청</strong></figcaption>
-    </figure>
-    
-</div>     
-
-<div class="flip-3d item5">
-    <figure>
-        <img src="./images/res5.JPG" alt="amazon_r">
- <figcaption><strong>반응형-아마존</strong></figcaption>
-    </figure>
-    
-</div>       
-  
-  
-  
-    
-   
-   
-   
-
-<ul class="progress">
-           <h1>My Skills</h1> 
-          <li data-name="MOS Office" data-percent="93%">  <svg viewBox="-10 -10 220 220">
-            <g fill="none" stroke-width="9" transform="translate(100,100)">
-          <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-          <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-          <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-          <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-          <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-          <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-         </g>
-        </svg> <svg viewBox="-10 -10 220 220">
-        <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="580"></path>
-        </svg> 
-     </li>
-
-      <li data-name="HTML/CSS Skill" data-percent="87%"> <svg viewBox="-10 -10 220 220">
-      <g fill="none" stroke-width="8" transform="translate(100,100)">
-      <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-      <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-      <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-      <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-      <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-      <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-      </g>
-      </svg> <svg viewBox="-10 -10 220 220">
-      <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="547"></path>
-      </svg> 
-      </li>
-  
-    <li data-name="jQuery/Java Skill" data-percent="80%"> 
-       <svg viewBox="-10 -10 220 220">
-        <g fill="none" stroke-width="8" transform="translate(100,100)">
-        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-        <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-        <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-        <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-        <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-       </g>
-     </svg> 
-     <svg viewBox="-10 -10 220 220">
-     <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="500"></path>
-     </svg> 
-  </li>
-  
-  <li data-name="PS/AI Skill" data-percent="97%"> <svg viewBox="-10 -10 220 220">
-    <g fill="none" stroke-width="9" transform="translate(100,100)">
-      <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-      <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-      <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-      <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-      <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-      <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-    </g>
-    </svg> <svg viewBox="-10 -10 220 220">
-    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="610"></path>
-    </svg> </li>
-  <!--  Item  -->
-  <li data-name="Design Skill" data-percent="58%"> <svg viewBox="-10 -10 220 220">
-    <g fill="none" stroke-width="6" transform="translate(100,100)">
-      <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-      <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-      <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
-      <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
-      <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
-      <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
-    </g>
-    </svg> <svg viewBox="-10 -10 220 220">
-    <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="364"></path>
-    </svg> </li>
-  
-</ul>
-
-<svg width="0" height="0">
-<defs>
-  <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
-    <stop stop-color="#618099"/>
-    <stop offset="100%" stop-color="#8e6677"/>
-  </linearGradient>
-  <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#8e6677"/>
-    <stop offset="100%" stop-color="#9b5e67"/>
-  </linearGradient>
-  <linearGradient id="cl3" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
-    <stop stop-color="#9b5e67"/>
-    <stop offset="100%" stop-color="#9c787a"/>
-  </linearGradient>
-  <linearGradient id="cl4" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
-    <stop stop-color="#9c787a"/>
-    <stop offset="100%" stop-color="#817a94"/>
-  </linearGradient>
-  <linearGradient id="cl5" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
-    <stop stop-color="#817a94"/>
-    <stop offset="100%" stop-color="#498a98"/>
-  </linearGradient>
-  <linearGradient id="cl6" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
-    <stop stop-color="#498a98"/>
-    <stop offset="100%" stop-color="#618099"/>
-  </linearGradient>
-</defs>
-</svg>   
-
- 
-<div class="container">
-    
-    <section class="pageNationBox">
-		 <div class="info">
-           
-         </div>
-         
-		<div class="imgBox">
-		
-			<article class="page" page-value="1">
-				
-				<a href="./design1/" class="col3">
-				<img src="./images/desk1.JPG" alt="desk1">
-				</a>
-				
-				<a href="./sub4.html" class="col3">
-				<img src="./images/ds3.JPG" alt="ds3">
-				</a>
-				
-				<a href="./design4/" class="col3">
-				<img src="./images/desk3.JPG" alt="desk3">
-				</a>
-				
-				<a href="./design3/" class="col3">
-				<img src="./images/desk4.JPG" alt="desk4">
-				</a>
-				
-				<a href="./sub4.html" class="col3">
-				<img src="./images/ds1.JPG" alt="ds1">
-				</a>
-			</article>
-			<article class="page" page-value="2">
-				
-				<a href="./mobile2/" class="col3">
-				<img src="./images/mobile1.JPG" alt="mobile1"></a>
-				
-				<a href="./mobile3/" class="col3">
-				<img src="./images/mobile2.JPG" alt="mobile2">
-				</a>
-				
-				<a href="./mobile4/" class="col3">
-				<img src="./images/mobile3.JPG" alt="mobile3"></a>
-				
-                <a href="./mobile5/" class="col3">
-                <img src="./images/mobile4.JPG" alt="mobile4"></a>
-                
-                <a href="./mobile6/" class="col3">
-                <img src="./images/mobile5.JPG" alt="mobile5"></a>
-				
-				<a href="./mobile8/" class="col3">
-				<img src="./images/mobile6.JPG" alt="mobile6"></a>
-				
-			</article>
-			<article class="page" page-value="3">
-				
-				<a href="./responsive1/" class="col3">
-				<img src="./images/res1.JPG" alt="res1">
-				</a>
-				
-				<a href="./responsive2/" class="col3">
-				<img src="./images/res2.JPG" alt="res2">
-				</a>
-				
-				<a href="." class="col3">
-				<img src="./images/res3.JPG" alt="res3">
-				</a>
-				
-				<a href="./responsive4/" class="col3">
-				<img src="./images/res4.JPG" alt="res5">
-				</a>
-				<a href="./responsive5/" class="col3">
-				<img src="./images/res5.JPG" alt="res5">
-				</a>
-			</article>
-		
-          
-		</div>
-		
-	</section>
-	<div class="more_wrap" id="pageNation">
-		<div class="more" page-value="1" id="pageSkipHome">&laquo;</div>
-		<div class="more item on" page-value="1" id="pageSkip1">1</div>
-		<div class="more item" page-value="2" id="pageSkip2">2</div>
-		<div class="more item" page-value="3" id="pageSkip3">3</div>
-		
-        <div class="more" page-value="6" id="pageSkipLast">&raquo;</div>
-	    </div>
-</div> 
-   
-    
-          
-<div class="container2">  
-  <form id="contact" action="" method="post">
-    <h1 class="ctitle">Contact Me</h1>
-    
-    <fieldset>
-      <input placeholder="Name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Email Address" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Phone Number" type="tel" tabindex="3" required>
-    </fieldset>
-   
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
- 
-  
-</div>
- 
-    </div>
-    
 </body>
+
 </html>
